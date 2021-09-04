@@ -1,0 +1,30 @@
+<div class="app-section">
+    <h2 class="app-section__title">{% include i18n id="Feedback" %}</h2>
+    <p class="app-section__summary">{% include i18n id="Here you can ask question or send job offer" %}</p>
+</div>
+
+<form method="post" action="https://forms.un-static.com/forms/2fcfad7416a990903686b82ab370941446892099">
+    <fieldset>
+        <label for="name">{% include i18n id="Full Name" %}:</label>
+        <input required="" name="name" id="name" placeholder="{% include i18n id="John Doe" %}" type="text">
+    </fieldset>
+    <fieldset>
+        <label for="email">{% include i18n id="Email" %}:</label>
+        <input type="email" required="" id="email" name="email" placeholder="johndoe@website.com">
+    </fieldset>
+    <fieldset>
+        <label for="subject">{% include i18n id="Subject" %}:</label>
+        <select required="" id="subject" name="subject">
+            <option value="" disabled selected>{% include i18n id="Choose subject" %}:</option>
+            <option value="Question">{% include i18n id="Question" %}</option>
+            <option value="Job Offer">{% include i18n id="Job Offer" %}</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="message">{% include i18n id="Message" %}:</label>
+        <textarea required="" id="message" name="message"></textarea>
+    </fieldset>
+    <fieldset>
+        <button type="submit">{% include i18n id="Send" %}</button>
+    </fieldset>
+</form>

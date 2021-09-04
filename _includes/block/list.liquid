@@ -1,0 +1,33 @@
+{% assign emptyTemplate = include.empty | default: 'block/empty.liquid' %}
+{% assign posts = site.posts | where_exp:"item", "item.category[0] == page.lang" %}
+{% if include.category %}
+{% assign posts = posts | where_exp:"item", "item.category[1] == include.category" %}
+{% endif %}
+{% if include.order %}
+{% assign posts = posts | sort: include.order %}
+{% endif %}
+{% if include.limit %}
+{% assign posts = posts | limit: include.limit %}
+{% endif %}
+{% if posts.size > 0 %}
+{% for post in posts %}
+{% include {{ include.item }} %}
+{% endfor %}
+{% capture schema %}
+<script type="application/ld+json">
+    {
+        "@context":"http://schema.org",
+        "@type":"ItemList",
+        "itemListElement":[{% for post in posts %}
+            {
+                "@type":"ListItem",
+                "position":{{forloop.index}},
+            "url":"{{ post.url | prepend: site.url }}"
+            }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+        ]
+    }
+</script>
+{% endcapture %}{{schema | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' '}}
+{% else %}
+{% include emptyTemplate %}
+{% endif %}

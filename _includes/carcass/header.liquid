@@ -1,0 +1,25 @@
+<div class="app-header">
+    <div class="app-header__progress"></div>
+    <div class="app-header__layout">
+        <h1 class="app-header__logo">
+            <a href="{{ '#home' | prepend: '/' | prepend: page.lang | prepend: '/' | absolute_url }}"
+               aria-label="{% include i18n id="Romasheva Design" %}"  data-rel="banner">
+                {% include icon name="logo" %}
+                <span class="app-header__title">{% include i18n id="Alla Romasheva" %}</span>
+            </a>
+        </h1>
+        <nav class="app-header__nav">
+            <div class="app-header__link">
+                <a href="https://romasheva.design/">{% include i18n id="Design" %}</a>
+            </div>
+            <div class="app-header__link">
+                <a href="https://romasheva.cv/">{% include i18n id="Resume" %}</a>
+            </div>
+            <div class="app-header__link">
+                <a href="{{ '/' | prepend: '/' | prepend: page.lang | prepend: '/' | absolute_url }}">
+                    {% include i18n id="Contacts" %}
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>

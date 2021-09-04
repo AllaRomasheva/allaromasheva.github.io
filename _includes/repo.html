@@ -1,0 +1,19 @@
+{% assign repositories = site.github.public_repositories | where:'fork', false %}
+{% for repository in repositories %}
+{% if repository.name contains "Design" %} {% continue %} {% endif %}
+{% if repository.name contains "CV" %} {% continue %} {% endif %}
+{% if repository.name contains "github.io" %} {% continue %} {% endif %}
+<article class="block post item">
+    <h3 class="text-uppercase"><a href="{{repository.html_url}}">{{ repository.name }}</a></h3>
+    {% if repository.description %}
+        <p>{{ repository.description }}</p>
+    {% endif %}
+    {% if repository.homepage %}
+    <p>
+        <i class="fa fa-home text-muted"></i>
+        <a href="{{ repository.homepage }}">{{ repository.homepage }}</a>
+    </p>
+    {% endif %}
+    {% highlight plain %}git clone {{ repository.clone_url }}{% endhighlight %}
+</article>
+{% endfor %}

@@ -1,0 +1,53 @@
+.icon{
+  --size:1em;
+  --display:inline-flex;
+  --line:var(--line-height-base);
+  display:var(--display);
+  fill:var(--color);
+  width:calc(var(--size) * var(--line));
+  height:calc(var(--size) * var(--line));
+  svg{
+    width:100%;
+    height:100%;
+  }
+}
+
+.icon.block{
+  --display:flex;
+}
+.icon.large{
+  --size:2em;
+}
+.icon.medium{
+  --size:1.5em;
+}
+.icon.small{
+  --line:1;
+}
+
+.icon.ml{
+  margin-left:.5rem;
+}
+
+.icon.mr{
+  margin-right:.5rem;
+}
+
+.icon.flag {
+  --size:1.25em;
+  --border:transparent;
+  --spacer:0.125em;
+  margin-top:-0.125em;
+  margin-bottom:calc(var(--spacer) / -1);
+  padding:var(--spacer);
+  border:var(--spacer) solid var(--border);
+  border-radius:0.5em;
+  &:hover{
+    transition: border-color 0.3s ease-in-out;
+    --border:var(--color-link);
+  }
+  &.active{
+    --spacer:0.125em;
+    --border:var(--color-success);
+  }
+}

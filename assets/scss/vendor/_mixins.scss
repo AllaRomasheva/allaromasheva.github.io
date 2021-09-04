@@ -1,0 +1,238 @@
+@import "variables";
+
+@mixin hover{
+  &:hover{
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,&:focus,&:active,&.active{
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  &:hover,&:focus{
+    @content;
+  }
+}
+
+@mixin active {
+  &:active,&.active{
+    @content;
+  }
+}
+
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+@mixin phone-xs {
+  @media screen and (max-width:$xs-min){
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width:$sm-min){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width:$md-min){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width:$lg-min){
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media screen and (max-width:$xl-min){
+    @content;
+  }
+}
+
+
+@mixin make-font-size($prefix:''){
+  @each $i, $value in $font-sizes {
+    $i:"#{$prefix}-#{$i}";
+    .fs#{$i}{
+      font-size:$value;
+    }
+  }
+}
+
+@mixin make-gutters($n,$size,$prefix:'',$postfix:''){
+  $i:"#{$prefix}-#{$n}#{$postfix}";
+  .p#{$i}{
+    padding:$size;
+  }
+  .py#{$i}{
+    padding-top:$size;
+    padding-bottom:$size;
+  }
+  .px#{$i}{
+    padding-right:$size;
+    padding-left:$size;
+  }
+  .pb#{$i}{
+    padding-bottom:$size;
+  }
+  .pt#{$i}{
+    padding-top:$size;
+  }
+  .pr#{$i}{
+    padding-right:$size;
+  }
+  .pl#{$i}{
+    padding-left:$size;
+  }
+  .m#{$i}{
+    margin:$size;
+  }
+  .my#{$i}{
+    margin-top:$size;
+    margin-bottom:$size;
+  }
+  .mx#{$i}{
+    margin-right:$size;
+    margin-left:$size;
+  }
+  .mb#{$i}{
+    margin-bottom:$size;
+  }
+  .mt#{$i}{
+    margin-top:$size;
+  }
+  .mr#{$i}{
+    margin-right:$size;
+  }
+  .ml#{$i}{
+    margin-left:$size;
+  }
+}
+
+@mixin make-orders($n,$prefix:''){
+  $i:"#{$prefix}-#{$n}";
+  .o#{$i}{
+    order: $n;
+  }
+}
+
+@mixin make-width($i:''){
+  $sizes: 10,20,30,40,50,60,70,80,90,100;
+  @each $size in $sizes {
+    .w#{$i}-#{$size} {
+      width: #{1% * $size};
+    }
+  }
+}
+
+@mixin make-align($i:''){
+  .text-center#{$i} {
+    text-align:center;
+  }
+  .text-left#{$i} {
+    text-align:left;
+  }
+  .text-right#{$i} {
+    text-align:right;
+  }
+}
+
+@mixin make-flex($i:''){
+  .fx#{$i} {
+    display:flex;
+  }
+  .fx-start#{$i} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .fx-center#{$i} {
+    justify-content: center;
+    text-align: center;
+  }
+  .fx-end#{$i} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+  .fx-top#{$i} {
+    align-items: flex-start;
+  }
+  .fx-middle#{$i} {
+    align-items: center;
+  }
+  .fx-bottom#{$i} {
+    align-items: flex-end;
+  }
+  .fx-around#{$i} {
+    justify-content: space-around;
+  }
+  .fx-between#{$i} {
+    justify-content: space-between;
+  }
+  .fx-first#{$i} {
+    order: -1;
+  }
+  .fx-last#{$i} {
+    order: 1;
+  }
+  .fx-inline#{$i} {
+    display:inline-flex;
+  }
+  .fx-column#{$i} {
+    flex-direction: column;
+  }
+  .fx-row#{$i} {
+    flex-direction: row;
+  }
+  .fx-1#{$i}{
+    flex:1;
+  }
+  .fx-0#{$i}{
+    flex:0;
+  }
+  .fx-100#{$i}{
+    flex-basis: 100%;
+  }
+  .fx-nowrap#{$i} {
+    flex-wrap:nowrap;
+  }
+  .fx-wrap#{$i} {
+    flex-wrap:wrap;
+  }
+  .hidden#{$i} {
+    display:none;
+  }
+  .visible#{$i}{
+    display:block;
+  }
+  .inline#{$i} {
+    display:inline;
+  }
+  .inline-block#{$i} {
+    display:inline-block;
+  }
+}
+
+@mixin generate($prefix:''){
+  @include make-font-size($prefix);
+  @include make-align($prefix);
+  @include make-flex($prefix);
+  @include make-gutters(a,auto,$prefix);
+  @for $n from 0 through 10 {
+    @include make-gutters($n,0.25rem * $n,$prefix);
+    @if $n > 0 {
+      @include make-gutters($n, (0.25rem * $n) * -1, $prefix, '-n');
+    }
+  }
+}
+

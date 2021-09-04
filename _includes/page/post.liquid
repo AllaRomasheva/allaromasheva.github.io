@@ -1,0 +1,16 @@
+<div class="app-page">
+    <div class="app-layout app-post">
+        <h5 class="mb-2 c-secondary">{% include dateformat value=page.date %}</h5>
+        <h1>{{ page.title }}</h1>
+        {% if page.image.path %}
+        <figure class="ratio ratio-16x9"><img alt="" src="{{ page.image.path }}"></figure>
+        {% endif %}
+        {{ content }}
+        {% if page.source %}
+        <p>{% include i18n id="Source" %} — <a href="{{page.source.url}}">{{page.source.name}}</a></p>
+        {% endif %}
+        {% if page.author %}
+        <p>{% include i18n id="Author" %} — <a href="{{page.author.url}}">{{page.author.name}}</a></p>
+        {% endif %}
+    </div>
+</div>

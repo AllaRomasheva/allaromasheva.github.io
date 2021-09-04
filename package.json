@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "favicons": "^6.2.2",
+    "gulp": "^4.0.2",
+    "gulp-string-replace": "^1.1.2",
+    "gulp2go": "^1.0.7"
+  }
+}

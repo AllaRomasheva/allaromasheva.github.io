@@ -1,0 +1,6 @@
+{% capture locale %}
+{% assign key  = include.id %}
+{% assign lang = page.lang %}
+{% assign locale = site.data.i18n[lang] %}
+{{ locale[key] | default: key }}
+{% endcapture %}{{locale | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' '}}

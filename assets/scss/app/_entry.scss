@@ -1,0 +1,57 @@
+.app-entry {
+  --entry-shadow: none;
+  --entry-rounded: .5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+  border-radius: .5rem;
+  box-shadow: var(--entry-shadow);
+  position: relative;
+
+  &:hover {
+    --entry-rounded: .5rem .5rem 0 0;
+    --entry-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__link {
+    @extend %cover;
+    z-index: 100;
+  }
+
+  &__cover {
+    position: relative;
+    &:before {
+      content: '';
+      padding-top: calc(9 / 16 * 100%);
+      display: block;
+    }
+    &:after {
+      @extend %cover;
+      content: '';
+      transition: border-radius 0.3s ease-in-out;
+      border-radius: var(--entry-rounded);
+      background: linear-gradient(40deg, rgba(#4e4cbd, 0.3), rgba(#ba0f51, 0.3));
+      z-index: 3;
+    }
+  }
+
+  &__image {
+    @extend %cover;
+    transition: border-radius 0.3s ease-in-out;
+    border-radius: var(--entry-rounded);
+    z-index: 2;
+  }
+
+
+  &__content {
+    border-radius: 0 0 .5rem .5rem;
+    padding: 1rem;
+  }
+
+  &__title{
+    --fs-h:var(--fs-5);
+    --line-margin: .5rem;
+  }
+  &__summary{
+    --line-margin:0;
+  }
+}

@@ -13,6 +13,8 @@ exclude:
 markdown: kramdown
 port: 4002
 
+markdown_ext: markdown,md,liquid
+
 # Setup
 title: Alla Romasheva
 summary: UX/UI designer
@@ -62,3 +64,53 @@ author:
     path:  /assets/images/alla.romasheva.jpeg
     height: 512
     width: 512
+
+defaults:
+
+  - scope:
+      path: ''
+    values:
+      lang: 'en'
+      layout: 'default'
+      alternate:
+        en: '/en/'
+        ru: '/ru/'
+        uk: '/uk/'
+      image:
+        path: '/assets/images/cover.jpg'
+        width: '1000'
+        height: '600'
+      seo:
+        links:
+          - https://romasheva.design/
+          - https://romasheva.cv/
+          - https://www.facebook.com/romasheva.design/
+          - https://www.instagram.com/romasheva.design/
+          - https://twitter.com/allaromasheva
+          - https://www.linkedin.com/in/romasheva/
+          - https://www.behance.net/romasheva
+          - https://dribbble.com/romasheva
+          - https://ua.linkedin.com/in/romasheva/
+          - https://github.com/allaromasheva
+          - https://www.pexels.com/@alla-romasheva-3820560/
+
+  - scope:
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'post'
+      permalink: '/:categories/:title.html'
+
+  - scope:
+      path: 'page/uk'
+    values:
+      lang: 'uk'
+  - scope:
+      path: 'page/en'
+    values:
+      lang: 'en'
+  - scope:
+      path: 'page/ru'
+    values:
+      lang: 'ru'
+

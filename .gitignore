@@ -1,2 +1,4 @@
 .idea
+_site
+.env
 node_modules

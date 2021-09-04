@@ -1,0 +1,4 @@
+{% if include.name %}
+{% assign path = '/assets/sprite.svg' | absolute_url %}
+<svg><use xlink:href="{{ path }}?{{site.github.build_revision}}#{{include.name}}"></use></svg>
+{% endif %}

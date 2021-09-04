@@ -1,0 +1,5 @@
+<figure class="embed">
+    <div class="ratio ratio-16x9">
+        <iframe src="{{include.src }}" frameborder="0" width="{{include.width | default: 100%}}" height="{{include.height | default: 100%}}"></iframe>
+    </div>
+</figure>

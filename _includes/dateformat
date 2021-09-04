@@ -1,0 +1,4 @@
+{%- assign month = include.value | date: "%B" -%}
+{%- assign day   = include.value | date: "%e" -%}
+{%- assign year  = include.value | date: "%Y" -%}
+{%- include i18n id=month %} {{ day }}, {{ year -}}

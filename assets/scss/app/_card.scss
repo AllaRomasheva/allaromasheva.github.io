@@ -1,0 +1,163 @@
+.app-card {
+
+  &__content {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+
+  &__front, &__back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    &:before {
+      content: '';
+      padding-top: calc(3 / 4 * 100%);
+      display: block;
+    }
+  }
+
+  &__back, &__image, &__inner, &__front:after {
+    @extend %cover;
+    border-radius: .5rem;
+    backface-visibility: hidden;
+  }
+
+  &__image {
+    z-index: 1;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  &__back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__front {
+    position: relative;
+    text-shadow: 0 0 .375rem rgba(0, 0, 0, 0.2);
+    color: #fff;
+
+    &:after {
+      content: '';
+      background: linear-gradient(40deg, rgba(#4e4cbd, 0.5), rgba(#ba0f51, 0.5));
+      z-index: 2;
+    }
+  }
+
+  &__inner {
+    display:flex;
+    flex-direction: column;
+    z-index: 3;
+    transform: translateZ(5rem);
+    padding: var(--spacer);
+  }
+
+  &__wrapper {
+    overflow-y: hidden;
+    margin-right: calc(var(--spacer) / -1);
+    padding-right: var(--spacer);
+
+    .active & {
+      overflow-y: auto;
+    }
+  }
+
+  &__title{
+    --fs-h:var(--fs-3);
+    --line-margin: 1rem;
+    @include phone {
+      --fs-h:var(--fs-4);
+      --line-margin: .5rem;
+    }
+  }
+
+  &__summary{
+    overflow-y:auto;
+  }
+
+  &__action{
+    margin-top:auto;
+  }
+
+  &__button {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background: rgba(255,255,255,0.3);
+    padding: 0.5rem 1rem;
+    text-shadow: 0 0 .375rem rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    transition: 0.3s ease-in-out;
+    font-weight: var(--font-weight-bold);
+    border-radius: .375rem;
+    cursor: pointer;
+    @include hover-focus-active {
+      background-color: #fff;
+      box-shadow: 0 0 .375rem rgba(0, 0, 0, 0.2);
+      text-shadow: none;
+      color: var(--color-link-active);
+    }
+    @include active{
+      position:relative;
+      top:.125rem;
+    }
+  }
+
+
+  &.active &__content {
+    transform: rotateY(180deg);
+  }
+
+
+  @include tablet {
+    &__button {
+      padding: 0.25rem 1rem;
+    }
+    &__front {
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  @include phone {
+
+    &.active &__content {
+      transform: none;
+    }
+    &__content {
+      transform-style: inherit;
+      transition: none;
+    }
+    &__back, &__front, &__inner {
+      position: relative;
+    }
+    &__button {
+      display: none;
+    }
+    &__back, &__front, &__inner {
+      transform: none;
+
+      &:before {
+        display: none;
+      }
+    }
+    &__front, &__front:after, &__image {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &__front {
+      p {
+        margin: 0;
+        font-size: 0.875rem;
+      }
+    }
+    &__back {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}

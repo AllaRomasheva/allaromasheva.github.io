@@ -1,0 +1,21 @@
+<script>
+    var head = document.querySelector('head');
+    var supported = ['en','uk','ru'];
+    var link = document.createElement('a');
+    var languages = navigator.languages.map(function(item){
+        return item.split('-')[0];
+    }).filter(function(value,index,self){
+        return self.indexOf(value) === index && supported.indexOf(value) > -1;
+    });
+    languages.slice(0,1).forEach(function(lang){
+        var node = document.createElement('link');
+        node.rel  = 'canonical';
+        link.href = ['',lang,''].join('/');
+        node.href = link.href;
+        head.appendChild(node);
+    });
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if( canonical ){
+        location.assign(canonical.href);
+    }
+</script>

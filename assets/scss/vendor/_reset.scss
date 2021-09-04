@@ -1,0 +1,152 @@
+@import "variables";
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size, 16px);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  background: var(--page-background);
+  padding: var(--page-padding);
+  color: var(--color-primary);
+  min-height: 100vh;
+  display: block;
+  position: relative;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: var(--fs-h);
+  line-height: var(--line-height-headings);
+}
+
+.lh-h{
+  line-height: var(--line-height-headings);
+}
+
+
+h1, h2, h3, h4, h5, h6, strong, b, .bold {
+  font-weight: var(--font-weight-bold);
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure {
+  margin: 0 0 var(--line-margin) 0;
+  text-align: var(--text-align, left);
+  &:last-child{
+    --line-margin:0;
+  }
+}
+
+@each $i, $value in $font-sizes {
+  h#{$i} {
+    --fs-h: var(--fs-#{$i});
+  }
+}
+
+ul {
+  padding-left: 0;
+
+  li {
+    padding-left: 1em;
+    position: relative;
+    list-style: none;
+
+    &:before {
+      content: '';
+      border-radius: 100%;
+      width: .5em;
+      height: .5em;
+      margin: .5em 0;
+      background: var(--color-pink);
+      position: absolute;
+      line-height: inherit;
+      left: 0;
+    }
+  }
+
+  li + li {
+    margin-top: .5em;
+  }
+}
+
+a {
+  color: var(--link-color, var(--color-link));
+  fill: var(--link-color, var(--color-link));
+  text-decoration: var(--link-decoration);
+  text-underline-offset: 0.1em;
+
+  &:hover {
+    color: var(--link-color-hover, var(--color-link-hover));
+    fill: var(--link-color-hover, var(--color-link-hover));
+    text-decoration: var(--link-decoration-hover);
+  }
+
+  &.active {
+    color: var(--link-color-active, var(--color-link-active));
+    fill: var(--link-color-active, var(--color-link-active));
+    text-decoration: var(--link-decoration-active);
+  }
+}
+
+[class*="c-"] {
+  color: var(--color);
+}
+
+@each $color, $value in $base-colors {
+  .c-#{$color} {
+    --color: #{$value}
+  }
+}
+
+@each $color, $value in $state-colors {
+  .c-#{$color} {
+    --color: #{$value}
+  }
+}
+
+@each $color, $value in $brand-colors {
+  .c-#{$color} {
+    --color: #{$value}
+  }
+}
+
+[class*="fs-"] {
+  font-size: var(--fs);
+}
+
+@each $i, $value in $font-sizes {
+  .fs-#{$i} {
+    --fs: #{$value}
+  }
+}
+
+@for $i from 1 through 12 {
+  .area-#{$i} {
+    grid-area:a-#{$i};
+  }
+}
+

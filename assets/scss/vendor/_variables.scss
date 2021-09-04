@@ -1,0 +1,89 @@
+$font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+$line-margin: 1rem !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$link-decoration: underline;
+$link-decoration-hover: none;
+$link-decoration-active: none;
+
+$alpha: 33;
+
+$font-sizes: (
+        1: $h1-font-size,
+        2: $h2-font-size,
+        3: $h3-font-size,
+        4: $h4-font-size,
+        5: $h5-font-size,
+        6: $h6-font-size
+) !default;
+
+$base-colors: (
+        "white": #FFFFFF,
+        "blue": #0D6EFD,
+        "pink": #D63384,
+        "gold": #FFD700,
+        "indigo": #6610F2,
+        "purple": #6F42C1,
+        "red": #DC3545,
+        "orange": #FD7E14,
+        "yellow": #FFC107,
+        "green": #198754,
+        "teal": #20C997,
+        "cyan": #0DCAF0
+);
+
+$state-colors: (
+        "primary": #303030,
+        "dark": #545454,
+        "light": #e5e5e5,
+        "secondary": #646464,
+        "success": #5b9e27,
+        "danger": #ba0f51,
+        "warning": #e79566,
+        "info": #353584,
+        "link": #4e4cbd,
+        "link-hover": #060534,
+        "link-visited": #060534,
+        "link-active": #ba0f51
+);
+
+$brand-colors: (
+        "facebook":#3b5998,
+        "linkedin":#0077b5,
+        "dribbble":#ea4c89,
+        "behance":#1769ff,
+        "instagram":#c13584,
+        "pinterest":#BD081C,
+        "twitter":#1DA1F2,
+        "github":#6e5494,
+        "pexels":#05a081
+);
+
+$xs-min: 30rem;
+$sm-min: 48rem;
+$md-min: 64rem;
+$lg-min: 75rem;
+$xl-min: 90rem;

@@ -1,0 +1,26 @@
+.app-page {
+  @extend %bg-white;
+  @extend %relative;
+  @extend %flex-column;
+  padding:var(--spacer);
+  z-index: 10;
+  &__layout{
+    @extend %layout;
+    @extend %grid-rows;
+    @extend %relative;
+    z-index:10;
+  }
+  &__cover{
+    @extend %cover;
+    @extend %noise;
+  }
+}
+
+.app-page-sticky{
+  overflow: hidden;
+  position: sticky;
+  top: var(--header-height);
+  + .app-page {
+    box-shadow: 0px -1rem 1rem #fff;
+  }
+}

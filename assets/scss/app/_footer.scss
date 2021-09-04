@@ -1,0 +1,25 @@
+.app-footer {
+  @extend %bg-white;
+  @extend %relative;
+  @extend %flex-column;
+  padding:var(--spacer);
+  z-index: 10;
+  border-top: 1px solid #f5f5f5;
+  &__layout {
+    @extend %layout;
+    @extend %grid-rows;
+    padding-bottom:env(safe-area-inset-bottom,0);
+  }
+  &__copyright {
+
+  }
+  &__languages {
+    @extend %flex-row;
+    @extend %flex-middle;
+    justify-content: flex-end;
+    @include phone{
+      justify-content: flex-start;
+    }
+  }
+
+}

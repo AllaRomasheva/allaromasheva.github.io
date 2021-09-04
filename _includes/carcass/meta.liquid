@@ -1,0 +1,10 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=5,initial-scale=1">
+<title>{{ page.title }}</title>
+{% seo title=false %}
+{%- if page.alternate %}
+{%- for item in page.alternate %}
+<link rel="alternate" href="{{ item[1] | absolute_url  }}" hreflang="{{ item[0] }}">
+{%- endfor %}
+{%- endif %}
+{% include carcass/favicon.liquid %}

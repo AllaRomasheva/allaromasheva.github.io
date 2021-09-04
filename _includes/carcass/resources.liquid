@@ -1,0 +1,16 @@
+<link rel="preload" href="{{ '/assets/css/index.min.css' | absolute_url | append: '?' | append: site.github.build_revision}}" as="style">
+<link rel="preload" href="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}" as="script">
+
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.min.css' | absolute_url | append: '?' | append: site.github.build_revision }}">
+
+{% if site.analytics -%}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics }}');
+</script>
+{%- endif %}
+
+<script async src="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}"></script>

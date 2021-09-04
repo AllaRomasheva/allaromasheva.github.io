@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+{% include carcass/meta.liquid %}
+{% include carcass/resources.liquid %}
+</head>
+<body class="app" id="home">
+{% include carcass/header.liquid %}
+{{ content }}
+{% include carcass/footer.liquid %}
+</body>
+</html>
