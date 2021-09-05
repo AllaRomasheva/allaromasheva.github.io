@@ -26,27 +26,22 @@ sharethis: property=5bbb3b137283210011cb6359&product=inline-share-buttons
 
 social:
   name: Alla Romasheva (Алла Ромашева)
-  links:
-    - https://romasheva.cv/
-    - https://romasheva.design/
-    - https://www.facebook.com/romasheva.design/
-    - https://www.instagram.com/romasheva.design/
-    - https://twitter.com/AllaRomasheva
-    - https://linkedin.com/in/romasheva/
-    - https://www.behance.net/romasheva
-    - https://dribbble.com/romasheva
-    - https://ua.linkedin.com/in/romasheva
-    - https://github.com/allaromasheva
-  profiles:
-    facebook: https://www.facebook.com/romasheva.design/
-    instagram: https://www.instagram.com/romasheva.design/
-    twitter: https://twitter.com/allaromasheva
-    linkedin: https://linkedin.com/in/romasheva/
-    behance: https://www.behance.net/romasheva
-    pinterest: https://www.pinterest.com/romasevaalla38/
-    dribbble: https://dribbble.com/romasheva
-    github: https://github.com/allaromasheva
-    pexels: https://www.pexels.com/@alla-romasheva-3820560/
+
+profiles:
+  facebook: https://www.facebook.com/100024493295482
+  twitter: https://twitter.com/AllaRomasheva
+  instagram: https://www.instagram.com/romasheva.design/
+  linkedin: https://www.linkedin.com/in/romasheva/
+  behance: https://www.behance.net/romasheva
+  pinterest: https://www.pinterest.com/romasevaalla38/
+  dribbble: https://dribbble.com/romasheva
+  github: https://github.com/allaromasheva
+  pexels: https://www.pexels.com/@alla-romasheva-3820560/
+
+contacts:
+  telegram: https://t.me/romasheva
+  skype: skype:live:37e58384221057fa?chat
+  messenger: https://m.me/romasheva.design
 
 twitter:
   username: allaromasheva
@@ -57,10 +52,10 @@ facebook:
 
 author:
   name: Alla Romasheva
-  url: https://romasheva.com/
+  url: https://romasheva.design/
   twitter: allaromasheva
   image:
-    path:  /assets/images/alla.romasheva.jpeg
+    path: /assets/images/cover.jpg
     height: 512
     width: 512
 
@@ -79,19 +74,6 @@ defaults:
         path: '/assets/images/cover.jpg'
         width: '1000'
         height: '600'
-      seo:
-        links:
-          - https://romasheva.design/
-          - https://romasheva.cv/
-          - https://www.facebook.com/romasheva.design/
-          - https://www.instagram.com/romasheva.design/
-          - https://twitter.com/allaromasheva
-          - https://www.linkedin.com/in/romasheva/
-          - https://www.behance.net/romasheva
-          - https://dribbble.com/romasheva
-          - https://ua.linkedin.com/in/romasheva/
-          - https://github.com/allaromasheva
-          - https://www.pexels.com/@alla-romasheva-3820560/
 
   - scope:
       path: ''
@@ -106,12 +88,24 @@ defaults:
       path: 'page/uk'
     values:
       lang: 'uk'
+      seo:
+        links:
+          - https://romasheva.design/uk/
+          - https://romasheva.cv/uk/
   - scope:
       path: 'page/en'
     values:
       lang: 'en'
+      seo:
+        links:
+          - https://romasheva.design/en/
+          - https://romasheva.cv/en/
   - scope:
       path: 'page/ru'
     values:
       lang: 'ru'
+      seo:
+        links:
+          - https://romasheva.design/ru/
+          - https://romasheva.cv/ru/
 
