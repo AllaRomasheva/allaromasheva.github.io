@@ -5,3 +5,39 @@
         </div>
     </div>
 </div>
+
+<div class="app-page" id="contacts">
+    <div class="app-page__layout">
+        <div class="app-grid">
+            <div class="app-rows">
+                <div class="app-section">
+                    <h2 class="app-section__title">{% include i18n id="Contact me" %}</h2>
+                    <p class="app-section__summary">{% include i18n id="If you have an open project or just need a consultation, you can contact me via" %}:</p>
+                </div>
+                <div class="app-inline">
+                    {% for item in site.contacts %}
+                        {% capture name %}{{item[0]}}{% endcapture %}
+                        <a href="{{ item[1] }}" class="app-inline__item" rel="author">
+                            <div class="icon mr large c-{{name}}">{% include icon name=name %}</div>
+                            <div class="bold">{{name | capitalize}}</div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="app-rows">
+                <div class="app-section">
+                    <h2 class="app-section__title">{% include i18n id="Follow me" %}</h2>
+                    <p class="app-section__summary">{% include i18n id="Places where you can follow me and my work" %}:</p>
+                </div>
+                <div class="app-inline">
+                    {% for item in site.profiles %}
+                        {% capture name %}{{item[0]}}-square{% endcapture %}
+                        <a href="{{ item[1] }}" title="{{item[0] | capitalize}}" class="app-inline__item" rel="author">
+                            <div class="icon large c-{{item[0]}}">{% include icon name=name %}</div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
