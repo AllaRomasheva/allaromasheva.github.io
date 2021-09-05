@@ -2,7 +2,8 @@
     <div class="app-footer__layout">
         <div class="app-grid">
             <div class="app-footer__copyright">
-                © 2018 - {{ "now" | date: "%Y" }} {% include i18n id=site.title %}. {% include i18n id="All Rights Reserved" %}.
+                <div>© 2018 - {{ "now" | date: "%Y" }} {% include i18n id=site.title %}.</div>
+                <div class="c-dark">{% include i18n id="All Rights Reserved" %}.</div>
             </div>
             <div class="app-footer__languages app-gap">
                 <span class="nowrap c-secondary">{% include i18n id="Choose language" %}:</span>

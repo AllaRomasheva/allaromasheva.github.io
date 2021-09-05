@@ -2,10 +2,10 @@
     <div class="app-header__progress"></div>
     <div class="app-header__layout">
         <h1 class="app-header__logo">
-            <a href="{{ '#home' | prepend: '/' | prepend: page.lang | prepend: '/' | absolute_url }}"
-               aria-label="{% include i18n id="Alla Romasheva" %}"  data-rel="banner">
+            <a href="{{ '/' | append: page.lang | append: '/' | absolute_url }}"
+               aria-label="{% include i18n id=site.title %}"  data-rel="banner">
                 {% include icon name="logo" %}
-                <span class="app-header__title">{% include i18n id="Alla Romasheva" %}</span>
+                <span class="app-header__title">{% include i18n id=site.title %}</span>
             </a>
         </h1>
         <nav class="app-header__nav">
