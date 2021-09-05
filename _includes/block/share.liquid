@@ -1,0 +1,7 @@
+{% if site.data.share %}
+<div class="app-post__share">
+    {% for item in site.data.share %}
+        <button data-share="{{item.name}}" class="c-{{item.name}}">{% include icon name=item.icon %}</button>
+    {% endfor %}
+</div>
+{% endif %}
