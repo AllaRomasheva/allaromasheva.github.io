@@ -64,9 +64,8 @@ const popup = (url, params) => {
 
 bind(document,'click','[data-share]', (ev)=>{
     ev.preventDefault();
-    const elem = ev.target;
+    const elem = ev.target.closest('[data-share]');
     const type = elem.getAttribute('data-share');
-    console.log(type);
     popup(format(provider[type], params()), {
         close: function () {
             if (elem.getAttribute('data-reload')) {

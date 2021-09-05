@@ -226,9 +226,8 @@ var popup = function popup(url, params) {
 
 (0, _bind.bind)(document, 'click', '[data-share]', function (ev) {
   ev.preventDefault();
-  var elem = ev.target;
+  var elem = ev.target.closest('[data-share]');
   var type = elem.getAttribute('data-share');
-  console.log(type);
   popup(format(provider[type], params()), {
     close: function close() {
       if (elem.getAttribute('data-reload')) {
