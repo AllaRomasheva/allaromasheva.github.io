@@ -13,7 +13,7 @@ var _bind = require("../utils/bind");
   }
 });
 
-},{"../utils/bind":6}],2:[function(require,module,exports){
+},{"../utils/bind":7}],2:[function(require,module,exports){
 "use strict";
 
 var _find = require("../utils/find");
@@ -42,7 +42,7 @@ if ('IntersectionObserver' in window) {
   (0, _find.find)('[data-cover]').forEach(cover);
 }
 
-},{"../utils/find":8}],3:[function(require,module,exports){
+},{"../utils/find":9}],3:[function(require,module,exports){
 "use strict";
 
 var _debounce = require("../utils/debounce");
@@ -122,7 +122,7 @@ window.addEventListener('load', callback, {
 });
 match();
 
-},{"../utils/bind":6,"../utils/debounce":7}],4:[function(require,module,exports){
+},{"../utils/bind":7,"../utils/debounce":8}],4:[function(require,module,exports){
 "use strict";
 
 var _debounce = require("../utils/debounce");
@@ -153,7 +153,92 @@ window.addEventListener('scroll', callback, {
 });
 scroller();
 
-},{"../utils/debounce":7}],5:[function(require,module,exports){
+},{"../utils/debounce":8}],5:[function(require,module,exports){
+"use strict";
+
+var _bind = require("../utils/bind");
+
+var _find = require("../utils/find");
+
+var provider = {
+  facebook: 'https://www.facebook.com/dialog/feed?app_id=2114681162110682&display=popup&link={link}',
+  twitter: 'https://twitter.com/intent/tweet?text={text}&url={link}&via={via}&hashtags={hashtags}',
+  linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url={link}',
+  telegram: 'https://t.me/share/url?url={link}&text={text}',
+  reddit: 'https://www.reddit.com/submit?url={link}&title={text}',
+  pinterest: 'https://www.pinterest.com/pin/create/button/?url={link}&media={image}&description={text}',
+  viber: 'viber://forward?text={link}',
+  messenger: 'https://www.facebook.com/dialog/send?link={link}&app_id=2114681162110682&redirect_uri={link}'
+};
+
+var params = function params() {
+  var meta = {};
+  var data = {};
+  var canonical = (0, _find.find)('link[rel="canonical"]')[0].getAttribute('href');
+  (0, _find.find)('meta').forEach(function (e, i) {
+    if (i = e.getAttribute('property') || e.getAttribute('name')) {
+      meta[i] = e.getAttribute('content');
+    }
+  });
+  data.text = encodeURIComponent(meta['og:description'] || meta['og:title'] || '');
+  data.link = encodeURIComponent(canonical || meta['og:url']);
+  data.image = meta['og:image'];
+
+  if (meta['twitter:creator']) {
+    data.via = String(meta['twitter:creator']).slice(1);
+  } else {
+    data.via = '';
+  }
+
+  if (meta['og:keywords']) {
+    data.hashtags = meta['og:keywords'];
+  } else {
+    data.hashtags = '';
+  }
+
+  return data;
+};
+
+var format = function format(string, params) {
+  return string.replace(/{(\w+)}/g, function (match, slot) {
+    return typeof params[slot] != "undefined" ? params[slot] : match;
+  });
+};
+
+var popup = function popup(url, params) {
+  var idle = null;
+  var width = 800;
+  var height = 750;
+  var template = 'scrollbars=0,resizable=0,menubar=0,toolbar=0,status=0,left={0},top={1},width={2},height={3}';
+  var config = format(template, [screen.width / 2 - width / 2, screen.height / 2 - height / 2, width, height]);
+  var popup = window.open(url, params.name || '', config);
+  popup.focus();
+  idle = setInterval(function () {
+    if (popup.closed === true) {
+      clearInterval(idle);
+
+      if (typeof params.close == 'function') {
+        params.close();
+      }
+    }
+  }, 200);
+};
+
+(0, _bind.bind)(document, 'click', '[data-share]', function (ev) {
+  ev.preventDefault();
+  var elem = ev.target;
+  var type = elem.getAttribute('data-share');
+  console.log(type);
+  popup(format(provider[type], params()), {
+    close: function close() {
+      if (elem.getAttribute('data-reload')) {
+        location.reload();
+      }
+    }
+  });
+});
+
+},{"../utils/bind":7,"../utils/find":9}],6:[function(require,module,exports){
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
@@ -166,11 +251,13 @@ require("./component/scroll");
 
 require("./component/card");
 
+require("./component/share");
+
 require("./component/cover");
 
 _smoothscrollPolyfill["default"].polyfill();
 
-},{"./component/card":1,"./component/cover":2,"./component/hashchange":3,"./component/scroll":4,"@babel/runtime/helpers/interopRequireDefault":9,"smoothscroll-polyfill":10}],6:[function(require,module,exports){
+},{"./component/card":1,"./component/cover":2,"./component/hashchange":3,"./component/scroll":4,"./component/share":5,"@babel/runtime/helpers/interopRequireDefault":10,"smoothscroll-polyfill":11}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -187,7 +274,7 @@ function bind(parent, event, selector, callback) {
   }, true);
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -212,7 +299,7 @@ function debounce(fn) {
   };
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -230,7 +317,7 @@ function find(selector, parent) {
   return Array.from((parent || document).querySelectorAll(selector));
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
     "default": obj
@@ -239,7 +326,7 @@ function _interopRequireDefault(obj) {
 
 module.exports = _interopRequireDefault;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
 (function () {
   'use strict';
@@ -674,5 +761,5 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 }());
 
-},{}]},{},[5])
+},{}]},{},[6])
 

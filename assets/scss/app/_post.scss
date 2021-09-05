@@ -30,8 +30,31 @@
   &__date{
 
   }
+  &__share{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-bottom:1rem;
+  }
   &__source + &__author{
     margin-top:1rem;
+  }
+}
+
+button[data-share]{
+  background-color:var(--color);
+  border:0;
+  border-radius: .5rem;
+  flex:1;
+  text-align:center;
+  justify-content: center;
+  svg{
+    fill:#fff;
+    height:1.5rem;
+    width:1.5rem;
+  }
+  + button[data-share]{
+    margin-left:.5rem;
   }
 }
 

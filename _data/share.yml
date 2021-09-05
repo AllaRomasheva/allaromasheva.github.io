@@ -1,0 +1,8 @@
+- name: facebook
+  icon: facebook
+- name: twitter
+  icon: twitter
+- name: viber
+  icon: viber
+- name: messenger
+  icon: messenger

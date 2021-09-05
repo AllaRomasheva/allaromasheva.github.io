@@ -18,7 +18,7 @@
                     {% for item in site.contacts %}
                         {% capture name %}{{item[0]}}{% endcapture %}
                         <a href="{{ item[1] }}" class="app-inline__item" rel="author">
-                            <div class="icon mr large c-{{name}}">{% include icon name=name %}</div>
+                            <div class="icon mr large">{% include icon name=name %}</div>
                             <div class="bold">{{name | capitalize}}</div>
                         </a>
                     {% endfor %}

@@ -93,6 +93,14 @@
   --color-github-alpha: #6e549433;
   --color-pexels: #05a081;
   --color-pexels-alpha: #05a08133;
+  --color-viber: #665CAC;
+  --color-viber-alpha: #665CAC33;
+  --color-telegram: #0088cc;
+  --color-telegram-alpha: #0088cc33;
+  --color-messenger: #00B2FF;
+  --color-messenger-alpha: #00B2FF33;
+  --color-skype: #00AFF0;
+  --color-skype-alpha: #00AFF033;
 }
 
 :root {
@@ -418,6 +426,22 @@ a.active {
 
 .c-pexels {
   --color: #05a081 ;
+}
+
+.c-viber {
+  --color: #665CAC ;
+}
+
+.c-telegram {
+  --color: #0088cc ;
+}
+
+.c-messenger {
+  --color: #00B2FF ;
+}
+
+.c-skype {
+  --color: #00AFF0 ;
 }
 
 [class*=fs-] {
@@ -1294,8 +1318,31 @@ button[type=submit]:active {
 .app-post__title {
   --line-margin: 1rem;
 }
+.app-post__share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
 .app-post__source + .app-post__author {
   margin-top: 1rem;
+}
+
+button[data-share] {
+  background-color: var(--color);
+  border: 0;
+  border-radius: 0.5rem;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+button[data-share] svg {
+  fill: #fff;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+button[data-share] + button[data-share] {
+  margin-left: 0.5rem;
 }
 
 .app-post figure img {
