@@ -98,7 +98,7 @@ defaults:
       type: 'posts'
     values:
       layout: 'post'
-      permalink: '/:categories/:title.html'
+      permalink: '/:categories/:year/:title.html'
       seo:
         links:
 
