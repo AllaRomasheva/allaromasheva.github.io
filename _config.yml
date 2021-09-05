@@ -99,6 +99,8 @@ defaults:
     values:
       layout: 'post'
       permalink: '/:categories/:title.html'
+      seo:
+        links:
 
   - scope:
       path: 'page/uk'

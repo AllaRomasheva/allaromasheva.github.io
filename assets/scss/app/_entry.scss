@@ -20,13 +20,14 @@
 
   &__cover {
     position: relative;
-
     &:before {
       content: '';
       padding-top: calc(9 / 16 * 100%);
       display: block;
     }
+  }
 
+  &__gradient {
     &:after {
       @extend %cover;
       content: '';
@@ -41,7 +42,7 @@
     @extend %cover;
     transition: border-radius 0.3s ease-in-out;
     border-radius: var(--entry-rounded);
-    z-index: 2;
+    z-index: 1;
   }
 
   &__content {
