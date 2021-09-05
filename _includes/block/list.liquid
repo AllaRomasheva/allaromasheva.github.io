@@ -1,7 +1,8 @@
 {% assign emptyTemplate = include.empty | default: 'block/empty.liquid' %}
-{% assign posts = site.posts | where_exp:"item", "item.category[0] == page.lang" %}
+{% assign itemTemplate  = include.item | default: 'block/empty.liquid' %}
+{% assign posts = site.posts | where_exp:"item", "item.category contains page.lang" %}
 {% if include.category %}
-{% assign posts = posts | where_exp:"item", "item.category[1] == include.category" %}
+{% assign posts = posts | where_exp:"item", "item.category contains include.category" %}
 {% endif %}
 {% if include.order %}
 {% assign posts = posts | sort: include.order %}
@@ -22,12 +23,12 @@
             {
                 "@type":"ListItem",
                 "position":{{forloop.index}},
-            "url":"{{ post.url | prepend: site.url }}"
+                "url":"{{ post.url | absolute_url }}"
             }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
         ]
     }
 </script>
 {% endcapture %}{{schema | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' '}}
 {% else %}
-{% include emptyTemplate %}
+{% include {{ emptyTemplate  }} %}
 {% endif %}

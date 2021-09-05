@@ -4,5 +4,8 @@
     "gulp": "^4.0.2",
     "gulp-string-replace": "^1.1.2",
     "gulp2go": "^1.0.7"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }

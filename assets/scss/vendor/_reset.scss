@@ -36,21 +36,23 @@ figure {
   margin: 0;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-size: var(--fs-h);
   line-height: var(--line-height-headings);
+}
+
+article{
+  font-size: var(--fs);
+  line-height: var(--line-height-base);
 }
 
 .lh-h{
   line-height: var(--line-height-headings);
 }
 
-
 h1, h2, h3, h4, h5, h6, strong, b, .bold {
   font-weight: var(--font-weight-bold);
 }
-
 
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, figure {

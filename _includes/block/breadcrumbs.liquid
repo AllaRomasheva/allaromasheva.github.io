@@ -1,0 +1,31 @@
+{% assign path    = page.url | split: '/' %}
+{% assign count   = path | size %}
+{% assign result  = "" | split : "," %}
+{% assign list    = site.html_pages %}
+{% if page.breadcrumbs != false %}
+{% if count > 0 %}
+<ol class="app-breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {% assign total = 0 %}
+    {% for part in path %}
+    {% assign result  = result | push: part %}
+    {% assign match   = result | join: '/' %}
+    {% unless match contains ".html" %}
+    {% assign match   = match | append: '/' %}
+    {% endunless %}
+    {% assign current = list | where: "url", match | first %}
+    {% if current.breadcrumbs != false %}
+    {% if current.title %}
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        {% assign total  = total | plus: 1 %}
+        {% assign title  = current.pagename | default: current.title %}
+        <meta itemprop="position" content="{{ total }}" />
+        <a href="{{ current.url | absolute_url }}" itemprop="item">
+            <span itemprop="name">{% include i18n id=title %}</span>
+        </a>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+</ol>
+{% endif %}
+{% endif %}

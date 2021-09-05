@@ -1,31 +1,7 @@
-<div class="app-page app-page-sticky">
+<div class="app-page app-fluid" id="blog">
     <div class="app-page__layout">
-        <div class="browser">
-            <div class="browser__toolbar">
-                <div class="browser__buttons"><i></i><i></i><i></i></div>
-                <div class="browser__console">https://romasheva.design/</div>
-            </div>
-            <div class="browser__window">
-                <div class="browser__document">
-                    <h2 class="browser__title">{% include i18n id="UI/UX Designer" %}</h2>
-                    <h3 class="browser__summary c-secondary">{% include i18n id="Designing and building intuitive, aesthetic digital products" %}</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="app-page" id="services">
-    <div class="app-page__layout">
-        <div class="app-section">
-            <h2 class="app-section__title">{% include i18n id="Projects" %}</h2>
-            <p class="app-section__summary">{% include i18n id="Create solutions based on the real needs of the client" %}</p>
-        </div>
         <div class="app-grid">
-            {% assign list = site.data.services[page.lang] | default: site.data.services.en %}
-            {% for item in list %}
-                {% include block/service.liquid %}
-            {% endfor %}
+            {% include block/list.liquid item='block/entry.liquid' %}
         </div>
     </div>
 </div>

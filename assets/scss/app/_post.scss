@@ -1,0 +1,41 @@
+.app-post{
+  --fs:1.125rem;
+  --fs-1:2.5rem;
+  --fs-2:2rem;
+  --fs-3:1.5rem;
+  --fs-4:1.25rem;
+  --fs-5:1.25rem;
+  --fs-6:1.25rem;
+  --line-height-headings: 1.25;
+  --line-height-base: 1.7;
+  @include phone-xs {
+    --fs:1.0625rem;
+    --fs-1:2rem;
+    --fs-2:1.5rem;
+    --fs-3:1.25rem;
+    --fs-4:1.125rem;
+    --fs-5:1.125rem;
+    --fs-6:1.125rem;
+    --line-height-headings: 1.125;
+    --line-height-base: 1.6;
+  }
+}
+
+.app-post{
+  max-width:48rem;
+  margin:0 auto;
+  &__title{
+    --line-margin: 1rem;
+  }
+  &__date{
+
+  }
+}
+
+.app-post{
+  figure{
+    img{
+      max-width:100%;
+    }
+  }
+}

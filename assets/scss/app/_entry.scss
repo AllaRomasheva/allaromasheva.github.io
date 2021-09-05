@@ -15,15 +15,18 @@
   &__link {
     @extend %cover;
     z-index: 100;
+    border-radius: .5rem;
   }
 
   &__cover {
     position: relative;
+
     &:before {
       content: '';
       padding-top: calc(9 / 16 * 100%);
       display: block;
     }
+
     &:after {
       @extend %cover;
       content: '';
@@ -41,17 +44,24 @@
     z-index: 2;
   }
 
-
   &__content {
     border-radius: 0 0 .5rem .5rem;
     padding: 1rem;
   }
 
-  &__title{
-    --fs-h:var(--fs-5);
-    --line-margin: .5rem;
+  &__date {
+    font-size: var(--font-size-small);
+    color: var(--color-dark);
   }
-  &__summary{
-    --line-margin:0;
+
+  &__title {
+    --fs-h: var(--fs-5);
+    --line-margin: 0rem;
+  }
+
+  &__summary {
+    --line-margin: 0;
+    color: var(--color-dark);
   }
 }
+

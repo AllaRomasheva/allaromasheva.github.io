@@ -196,6 +196,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height-headings);
 }
 
+article {
+  font-size: var(--fs);
+  line-height: var(--line-height-base);
+}
+
 .lh-h {
   line-height: var(--line-height-headings);
 }
@@ -1043,6 +1048,7 @@ button[type=submit]:active {
 }
 .app-entry__link {
   z-index: 100;
+  border-radius: 0.5rem;
 }
 .app-entry__cover {
   position: relative;
@@ -1068,12 +1074,17 @@ button[type=submit]:active {
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 1rem;
 }
+.app-entry__date {
+  font-size: var(--font-size-small);
+  color: var(--color-dark);
+}
 .app-entry__title {
-  --fs-h:var(--fs-5);
-  --line-margin: .5rem;
+  --fs-h: var(--fs-5);
+  --line-margin: 0rem;
 }
 .app-entry__summary {
-  --line-margin:0;
+  --line-margin: 0;
+  color: var(--color-dark);
 }
 
 .app-card__content {
@@ -1228,4 +1239,40 @@ button[type=submit]:active {
 }
 .app-page-sticky + .app-page {
   box-shadow: 0px -1rem 1rem #fff;
+}
+
+.app-post {
+  --fs:1.125rem;
+  --fs-1:2.5rem;
+  --fs-2:2rem;
+  --fs-3:1.5rem;
+  --fs-4:1.25rem;
+  --fs-5:1.25rem;
+  --fs-6:1.25rem;
+  --line-height-headings: 1.25;
+  --line-height-base: 1.7;
+}
+@media screen and (max-width: 30rem) {
+  .app-post {
+    --fs:1.0625rem;
+    --fs-1:2rem;
+    --fs-2:1.5rem;
+    --fs-3:1.25rem;
+    --fs-4:1.125rem;
+    --fs-5:1.125rem;
+    --fs-6:1.125rem;
+    --line-height-headings: 1.125;
+    --line-height-base: 1.6;
+  }
+}
+
+.app-post {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.app-post__title {
+  --line-margin: 1rem;
+}
+.app-post figure img {
+  max-width: 100%;
 }
