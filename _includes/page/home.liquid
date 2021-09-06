@@ -17,7 +17,7 @@
                 <div class="app-inline">
                     {% for item in site.contacts %}
                         {% capture name %}{{item[0]}}{% endcapture %}
-                        <a href="{{ item[1] }}" class="app-inline__item" rel="author">
+                        <a href="{{ item[0] | prepend: '/social/' | append: '/' | absolute_url }}" class="app-inline__item" rel="author">
                             <div class="icon mr large">{% include icon name=name %}</div>
                             <div class="bold">{{name | capitalize}}</div>
                         </a>
@@ -32,7 +32,7 @@
                 <div class="app-inline">
                     {% for item in site.profiles %}
                         {% capture name %}{{item[0]}}-square{% endcapture %}
-                        <a href="{{ item[1] }}" title="{{item[0] | capitalize}}" class="app-inline__item" rel="author">
+                        <a href="{{ item[0] | prepend: '/social/' | append: '/' | absolute_url }}" title="{{item[0] | capitalize}}" class="app-inline__item" rel="author">
                             <div class="icon large c-{{item[0]}}">{% include icon name=name %}</div>
                         </a>
                     {% endfor %}
