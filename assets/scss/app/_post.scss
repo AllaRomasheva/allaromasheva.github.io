@@ -60,8 +60,13 @@ button[data-share]{
 
 .app-post{
   figure{
+    @include phone{
+      margin-left:-1rem;
+      margin-right:-1rem;
+    }
     img{
       max-width:100%;
+      display:block;
     }
   }
 }

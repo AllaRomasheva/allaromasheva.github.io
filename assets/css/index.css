@@ -1345,6 +1345,13 @@ button[data-share] + button[data-share] {
   margin-left: 0.5rem;
 }
 
+@media screen and (max-width: 48rem) {
+  .app-post figure {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
 .app-post figure img {
   max-width: 100%;
+  display: block;
 }

@@ -7,7 +7,7 @@
             <h1 class="app-post__title">{{ page.title }}</h1>
             {% include block/share.liquid %}
             {% if page.image.path %}
-                <figure class="ratio ratio-16x9"><img alt="" src="{{ page.image.path }}"></figure>
+                <figure class="image"><img alt="" src="{{ page.image.path }}"></figure>
             {% endif %}
             {{ content }}
             {% if page.source %}
