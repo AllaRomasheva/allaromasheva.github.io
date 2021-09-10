@@ -67,10 +67,6 @@ defaults:
     values:
       lang: 'en'
       layout: 'default'
-      alternate:
-        en: '/en/'
-        ru: '/ru/'
-        uk: '/uk/'
       image:
         path: '/assets/images/cover.jpg'
         width: '1000'
