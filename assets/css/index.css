@@ -1129,7 +1129,6 @@ button[type=submit]:active {
   flex-direction: column;
 }
 .app-entry__date {
-  margin-top: auto;
   font-size: var(--font-size-small);
   color: var(--color-link);
 }
@@ -1333,6 +1332,7 @@ button[type=submit]:active {
 .app-post__date {
   display: inline-flex;
   margin-bottom: var(--line-margin);
+  color: var(--color-link);
 }
 .app-post__share {
   display: flex;
