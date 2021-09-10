@@ -1304,6 +1304,7 @@ button[type=submit]:active {
   --fs-4:1.25rem;
   --fs-5:1.25rem;
   --fs-6:1.25rem;
+  --line-margin: 1.5rem;
   --line-height-headings: 1.1;
   --line-height-base: 1.7;
 }
@@ -1316,6 +1317,7 @@ button[type=submit]:active {
     --fs-4:1.125rem;
     --fs-5:1.125rem;
     --fs-6:1.125rem;
+    --line-margin: 1rem;
     --line-height-headings: 1.125;
     --line-height-base: 1.6;
   }
@@ -1326,16 +1328,20 @@ button[type=submit]:active {
   margin: 0 auto;
 }
 .app-post__title {
-  --line-margin: 1rem;
+  margin-bottom: 0;
+}
+.app-post__date {
+  display: inline-flex;
+  margin-bottom: var(--line-margin);
 }
 .app-post__share {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: var(--line-margin);
 }
 .app-post__source + .app-post__author {
-  margin-top: 1rem;
+  margin-top: var(--line-margin);
 }
 
 button[data-share] {
@@ -1355,7 +1361,7 @@ button[data-share] + button[data-share] {
   margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 30rem) {
   .app-post figure {
     margin-left: -1rem;
     margin-right: -1rem;

@@ -1,10 +1,10 @@
 <div class="app-page app-fluid">
     <div class="app-page__layout">
         <article class="app-post">
-            {% if page.date %}
-            <time class="app-post__date">{% include dateformat value=page.date %}</time>
-            {% endif %}
             <h1 class="app-post__title">{{ page.title }}</h1>
+            {% if page.date %}
+                <time class="app-post__date">{% include dateformat value=page.date %}</time>
+            {% endif %}
             {% include block/share.liquid %}
             {% if page.image.path %}
                 <figure class="image"><img alt="" src="{{ page.image.path }}"></figure>

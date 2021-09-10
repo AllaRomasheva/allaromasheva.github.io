@@ -1,4 +1,4 @@
-{%- assign summary = post.description | defalts: post.excerpt | defaults: post.description | strip_html | truncate: 150, " ... " -%}
+{%- assign summary = post.description | defalts: post.excerpt | defaults: post.description | strip_html | truncate: 180, " ... " -%}
 {%- assign url = post.url | absolute_url -%}
 {%- assign title = post.title -%}
 {%- assign image = post.image.path | defaults: post.image | prepend: 'https://images.weserv.nl/?fit=cover&w=1000&h=600&url=' -%}
@@ -13,4 +13,3 @@
     </div>
     <a class="app-entry__link" aria-label="{{ post.title }}" href="{{ url }}"></a>
 </article>
-
