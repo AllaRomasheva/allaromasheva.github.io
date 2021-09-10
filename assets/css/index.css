@@ -1086,14 +1086,20 @@ button[type=submit]:active {
   border-radius: 0.5rem;
   box-shadow: var(--entry-shadow);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .app-entry:hover {
   --entry-rounded: .5rem .5rem 0 0;
   --entry-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
 }
+.app-entry__fluid {
+  flex: 1;
+}
 .app-entry__link {
   z-index: 100;
   border-radius: 0.5rem;
+  text-indent: -99999px;
 }
 .app-entry__cover {
   position: relative;
@@ -1118,13 +1124,14 @@ button[type=submit]:active {
 .app-entry__content {
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 1rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 .app-entry__date {
   margin-top: auto;
   font-size: var(--font-size-small);
-  color: var(--color-dark);
+  color: var(--color-link);
 }
 .app-entry__title {
   --fs-h: var(--fs-5);

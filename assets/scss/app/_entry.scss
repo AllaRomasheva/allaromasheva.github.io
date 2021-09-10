@@ -6,16 +6,20 @@
   border-radius: .5rem;
   box-shadow: var(--entry-shadow);
   position: relative;
-
+  display:flex;
+  flex-direction: column;
   &:hover {
     --entry-rounded: .5rem .5rem 0 0;
     --entry-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
   }
-
+  &__fluid{
+    flex:1;
+  }
   &__link {
     @extend %cover;
     z-index: 100;
     border-radius: .5rem;
+    text-indent: -99999px;
   }
 
   &__cover {
@@ -48,6 +52,7 @@
   &__content {
     border-radius: 0 0 .5rem .5rem;
     padding: 1rem;
+    flex:1;
     display:flex;
     flex-direction: column;
   }
@@ -55,7 +60,7 @@
   &__date {
     margin-top:auto;
     font-size: var(--font-size-small);
-    color: var(--color-dark);
+    color: var(--color-link);
   }
 
   &__title {
