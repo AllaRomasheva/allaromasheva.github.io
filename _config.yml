@@ -76,9 +76,9 @@ defaults:
       path: '/'
     values:
       alternate:
-        en: /en/
-        ru: /ru/
-        uk: /uk/
+        en: '/en/'
+        ru: '/ru/'
+        uk: '/uk/'
 
   - scope:
       path: ''
