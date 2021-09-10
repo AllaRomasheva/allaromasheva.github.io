@@ -1131,6 +1131,7 @@ button[type=submit]:active {
 .app-entry__date {
   font-size: var(--font-size-small);
   color: var(--color-link);
+  margin-bottom: 0.5rem;
 }
 .app-entry__title {
   --fs-h: var(--fs-5);

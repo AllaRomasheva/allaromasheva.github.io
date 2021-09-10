@@ -61,9 +61,11 @@
     flex-direction: column;
   }
 
+
   &__date {
     font-size: var(--font-size-small);
     color: var(--color-link);
+    margin-bottom:.5rem;
   }
 
   &__title {
