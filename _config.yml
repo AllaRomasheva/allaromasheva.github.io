@@ -73,6 +73,14 @@ defaults:
         height: '600'
 
   - scope:
+      path: '/'
+    values:
+      alternate:
+        en: /en/
+        ru: /ru/
+        uk: /uk/
+
+  - scope:
       path: ''
       type: 'posts'
     values:
@@ -97,6 +105,7 @@ defaults:
         links:
           - https://romasheva.design/en/
           - https://romasheva.cv/en/
+          -
   - scope:
       path: 'page/ru'
     values:
