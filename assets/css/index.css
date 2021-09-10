@@ -1311,7 +1311,7 @@ button[type=submit]:active {
 @media screen and (max-width: 30rem) {
   .app-post {
     --fs:1.0625rem;
-    --fs-1:2rem;
+    --fs-1:1.75rem;
     --fs-2:1.5rem;
     --fs-3:1.25rem;
     --fs-4:1.125rem;
