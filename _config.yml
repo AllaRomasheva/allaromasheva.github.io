@@ -14,6 +14,7 @@ markdown: kramdown
 port: 4002
 
 markdown_ext: markdown,md,liquid
+future: true
 
 # Setup
 title: Alla Romasheva
