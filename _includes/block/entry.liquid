@@ -2,7 +2,7 @@
 {%- assign url = post.url | absolute_url -%}
 {%- assign title = post.title -%}
 {%- assign image = post.image.path | defaults: post.image -%}
-{%- assign image = image | replace: 'i.imgur.com/' , 'uazmi.media/imgur/' -%}
+{%- assign image = image | replace: 'i.imgur.com' , 'uazmi.media/imgur' -%}
 {%- assign image = image | prepend: 'https://images.weserv.nl/?fit=cover&w=1000&h=600&url=' -%}
 <article class="app-entry">
     <div class="app-entry__cover">

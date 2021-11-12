@@ -7,7 +7,8 @@
             {% endif %}
             {% include block/share.liquid %}
             {% if page.image.path %}
-                <figure class="image"><img alt="" src="{{ page.image.path }}"></figure>
+                {%- assign image = page.image.path | replace: 'i.imgur.com' , 'uazmi.media/imgur' -%}
+                <figure class="image"><img alt="{{ post.title }}" src="{{ image }}"></figure>
             {% endif %}
             {{ content }}
             {% if page.source %}
