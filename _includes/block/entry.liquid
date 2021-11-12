@@ -1,7 +1,9 @@
 {%- assign summary = post.description | defalts: post.excerpt | defaults: post.description | strip_html | truncate: 180, " ... " -%}
 {%- assign url = post.url | absolute_url -%}
 {%- assign title = post.title -%}
-{%- assign image = post.image.path | defaults: post.image | prepend: 'https://images.weserv.nl/?fit=cover&w=1000&h=600&url=' -%}
+{%- assign image = post.image.path | defaults: post.image -%}
+{%- assign image = image | replace: 'i.imgur.com/' , 'uazmi.media/imgur/' -%}
+{%- assign image = image | prepend: 'https://images.weserv.nl/?fit=cover&w=1000&h=600&url=' -%}
 <article class="app-entry">
     <div class="app-entry__cover">
         <div class="app-entry__image" data-cover="{{ image }}"></div>
