@@ -13,5 +13,4 @@
     gtag('config', '{{ site.analytics }}');
 </script>
 {%- endif %}
-
-<script async src="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}"></script>
+<script defer src="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}"></script>
