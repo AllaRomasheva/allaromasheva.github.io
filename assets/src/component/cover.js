@@ -23,3 +23,4 @@ if ('IntersectionObserver' in window) {
 } else {
     find('[data-cover]').forEach(cover);
 }
+
