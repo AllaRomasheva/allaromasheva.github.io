@@ -3,7 +3,7 @@
 {%- assign title = post.title -%}
 {%- assign image = post.image.path | defaults: post.image -%}
 {%- assign image = image | replace: 'i.imgur.com' , 'im.ksv.app/imgur' -%}
-{%- assign image = image | append: '?w=1000&h=600' -%}
+{%- assign image = image | append: '?w=800&h=480' -%}
 <article class="app-entry">
     <div class="app-entry__cover">
         <div class="app-entry__image" data-cover="{{ image }}"></div>
