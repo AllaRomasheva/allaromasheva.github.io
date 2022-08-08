@@ -4,7 +4,9 @@
             {% include block/list.liquid limit=10 item='block/entry.liquid' %}
         </div>
         <div>
-            <a class="app-button" href="{{ '/' | append: page.lang | append: '/archive/' | absolute_url }}">Archive</a>
+            <a class="app-button" href="{{ '/' | append: page.lang | append: '/archive/' | absolute_url }}">
+                {%- include i18n id="Archive" -%}
+            </a>
         </div>
     </div>
 </div>
