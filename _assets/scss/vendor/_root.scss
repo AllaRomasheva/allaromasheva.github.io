@@ -1,0 +1,72 @@
+@import "variables";
+@import "mixins";
+
+:root {
+  --font-size: #{$font-size-root};
+  --font-family-base: #{$font-family-base};
+  --font-family-mono: #{$font-family-mono};
+  --font-weight-thin: #{$font-weight-light};
+  --font-weight-normal:#{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+  --font-size-small: #{$font-size-sm};
+  --line-height-base:#{$line-height-base};
+  --line-height-headings:#{$line-height-sm};
+  --line-margin:#{$line-margin};
+}
+
+:root {
+  --link-decoration: #{$link-decoration};
+  --link-decoration-hover:#{$link-decoration-hover};
+  --link-decoration-active:#{$link-decoration-active};
+}
+
+:root {
+  @each $i, $value in $font-sizes {
+    --fs-#{$i}: #{$value};
+  }
+}
+
+:root {
+  @each $color, $value in $base-colors {
+    --color-#{$color}: #{$value};
+    --color-#{$color}-alpha: #{$value}#{$alpha};
+  }
+  @each $color, $value in $state-colors {
+    --color-#{$color}: #{$value};
+    --color-#{$color}-alpha: #{$value}#{$alpha};
+  }
+  @each $color, $value in $brand-colors {
+    --color-#{$color}: #{$value};
+    --color-#{$color}-alpha: #{$value}#{$alpha};
+  }
+}
+
+:root {
+  --gap: 2rem;
+  --spacer:2rem;
+}
+
+@include phone-xs {
+  :root {
+    --gap: 1rem;
+    --spacer:1rem;
+  }
+}
+
+:root {
+  --header-background: transparent;
+  --header-title-visibility: block;
+  --header-shadow: none;
+  --header-height: 5rem;
+  --header-logo: 1.5rem;
+  --header-icon: 2rem;
+  --header-nav: 3rem;
+}
+
+@include phone {
+  :root {
+    --header-icon: 1.75rem;
+    --header-height: 4rem;
+    --header-title-visibility: none;
+  }
+}

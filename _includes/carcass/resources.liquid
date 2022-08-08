@@ -1,6 +1,8 @@
-<link rel="preload" href="{{ '/assets/css/index.min.css' | absolute_url | append: '?' | append: site.github.build_revision}}" as="style">
-<link rel="preload" href="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}" as="script">
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.min.css' | absolute_url | append: '?' | append: site.github.build_revision }}">
+{% assign timestamp = "now" | date: "%s" %}
+<link rel="preload" href="{{ '/dist/index.min.css' | absolute_url | append: '?' | append: timestamp }}" as="style">
+<link rel="preload" href="{{ '/dist/index.min.js' | absolute_url | append: '?' | append: timestamp }}" as="script">
+<link rel="stylesheet" type="text/css" href="{{ '/dist/index.min.css' | absolute_url | append: '?' | append: timestamp }}">
+
 {% if site.analytics -%}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
 <script>
@@ -10,4 +12,4 @@
     gtag('config', '{{ site.analytics }}');
 </script>
 {%- endif %}
-<script defer src="{{ '/assets/js/app.min.js' | absolute_url | append: '?' | append: site.github.build_revision }}"></script>
+<script defer src="{{ '/dist/index.min.js' | absolute_url | append: '?' | append: timestamp }}"></script>

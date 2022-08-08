@@ -1,6 +1,6 @@
 {% assign emptyTemplate = include.empty | default: 'block/empty.liquid' %}
 {% assign itemTemplate  = include.item | default: 'block/empty.liquid' %}
-{% assign posts = site.posts | where_exp:"item", "item.category contains page.lang" %}
+{% assign posts = site.posts | where_exp:"item", "item.lang == page.lang" %}
 {% if include.category %}
 {% assign posts = posts | where_exp:"item", "item.category contains include.category" %}
 {% endif %}

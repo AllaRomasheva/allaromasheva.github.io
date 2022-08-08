@@ -6,8 +6,8 @@ const favicons = require("favicons");
 
 gulp.task('favicon', function(){
     const color = '#000000';
-    const iconFile = 'assets/favicon.svg';
-    const iconPath = 'assets/favicon';
+    const iconFile = '_assets/favicon.svg';
+    const iconPath = 'dist/favicon';
     const appName  = 'Alla Romasheva';
     const appShortName = 'Alla Romasheva'
     const url = 'https://romasheva.com/';
@@ -35,7 +35,7 @@ gulp.task('favicon', function(){
                 appleStartup: false,
                 coast: true,
                 favicons: true,
-                firefox: true,
+                firefox: false,
                 windows: true,
                 yandex: false
             }
@@ -45,17 +45,20 @@ gulp.task('favicon', function(){
         .pipe(gulp.dest(iconPath));
 });
 
+gulp.task('images', function(){
+    return gulp.src('_assets/images/**.*').pipe(gulp.dest('dist/images'))
+});
 
 gulp.task('sprite', () => {
-    return svgBundler('assets/icons/**/*.svg', 'sprite.svg', 'assets');
+    return svgBundler('_assets/icons/**/*.svg', 'sprite.svg', 'dist');
 });
 
 gulp.task('scss', () => {
-    return scssBundler('assets/scss/*.scss', 'assets/css');
+    return scssBundler('_assets/scss/*.scss', 'dist');
 });
 
 gulp.task('js', function(){
-    return jsBundler('assets/src/index.js','app.js','assets/js',{
+    return jsBundler('_assets/src/index.js','index.js','dist',{
         babelify:{
 
         },
@@ -66,8 +69,8 @@ gulp.task('js', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch(['assets/scss/**/*.scss'], gulp.series(['scss']));
-    gulp.watch(['assets/build.js','assets/src/**/*.js'], gulp.series(['js']));
+    gulp.watch(['_assets/scss/**/*.scss'], gulp.series(['scss']));
+    gulp.watch(['_assets/build.js','_assets/src/**/*.js'], gulp.series(['js']));
 });
 
-gulp.task('default', gulp.series(['scss','sprite','js']));
+gulp.task('default', gulp.series(['scss','sprite','js','images']));

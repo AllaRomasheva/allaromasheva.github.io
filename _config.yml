@@ -8,6 +8,13 @@ plugins:
 exclude:
   - .idea
   - node_modules
+  - Gemfile.lock
+  - Gemfile
+  - package.json
+  - package-lock.json
+  - CNAME
+  - gulpfile.js
+  - _config.dev.yml
 
 #Others
 markdown: kramdown
@@ -19,7 +26,7 @@ future: true
 # Setup
 title: Alla Romasheva
 summary: UX/UI designer
-logo: /assets/favicon/android-icon-192x192.png
+logo: /dist/favicon/android-icon-192x192.png
 url: https://romasheva.com
 baseurl: ''
 email: alla@romasheva.com
@@ -57,7 +64,7 @@ author:
   url: https://romasheva.design/
   twitter: allaromasheva
   image:
-    path: /assets/images/cover.jpg
+    path: /dist/images/cover.jpg
     height: 512
     width: 512
 
@@ -69,26 +76,24 @@ defaults:
       lang: 'en'
       layout: 'default'
       image:
-        path: '/assets/images/cover.jpg'
+        path: '/dist/images/cover.jpg'
         width: '1000'
         height: '600'
 
   - scope:
-      path: '/'
-    values:
-      alternate:
-        en: '/en/'
-        ru: '/ru/'
-        uk: '/uk/'
-
-  - scope:
-      path: ''
-      type: 'posts'
+      path: '_posts/uk'
     values:
       layout: 'post'
-      permalink: '/:categories/:year/:title.html'
-      seo:
-        links:
+      lang: uk
+      permalink: '/uk/:year/:title.html'
+
+
+  - scope:
+      path: '_posts/en'
+    values:
+      layout: 'post'
+      lang: en
+      permalink: '/en/:year/:title.html'
 
   - scope:
       path: 'page/uk'
@@ -98,6 +103,7 @@ defaults:
         links:
           - https://romasheva.design/uk/
           - https://romasheva.cv/uk/
+
   - scope:
       path: 'page/en'
     values:
@@ -106,13 +112,3 @@ defaults:
         links:
           - https://romasheva.design/en/
           - https://romasheva.cv/en/
-          -
-  - scope:
-      path: 'page/ru'
-    values:
-      lang: 'ru'
-      seo:
-        links:
-          - https://romasheva.design/ru/
-          - https://romasheva.cv/ru/
-

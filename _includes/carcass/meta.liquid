@@ -7,4 +7,13 @@
 <link rel="alternate" href="{{ item[1] | absolute_url  }}" hreflang="{{ item[0] }}">
 {%- endfor %}
 {%- endif %}
+{%- if page.path contains '_posts' %}
+    {%- if page.lang == 'uk' %}
+        {%- assign alternativeUrl = page.url | replace_first: 'uk', 'en' | absolute_url  -%}
+        <link rel="alternate" href="{{ alternativeUrl  }}" hreflang="en">
+    {%- else %}
+        {%- assign alternativeUrl = page.url | replace_first: 'en', 'uk' | absolute_url  -%}
+        <link rel="alternate" href="{{ alternativeUrl  }}" hreflang="uk">
+    {%- endif %}
+{%- endif %}
 {% include carcass/favicon.liquid %}
