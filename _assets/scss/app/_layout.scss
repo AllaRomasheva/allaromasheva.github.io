@@ -72,6 +72,10 @@
   }
 }
 
+.app-grid-archive{
+  grid-template-columns: 1fr;
+}
+
 .app-inline {
   @extend %flex-inline;
   @extend %flex-wrap;

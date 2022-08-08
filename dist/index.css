@@ -599,8 +599,6 @@ a.active {
   --size:1.25em;
   --border:transparent;
   --spacer:0.125em;
-  margin-top: -0.125em;
-  margin-bottom: calc(var(--spacer) / -1);
   padding: var(--spacer);
   border: var(--spacer) solid var(--border);
   border-radius: 0.5em;
@@ -956,6 +954,10 @@ button[type=submit]:active {
   }
 }
 
+.app-grid-archive {
+  grid-template-columns: 1fr;
+}
+
 .app-inline {
   margin: -0.5rem;
 }
@@ -1069,7 +1071,7 @@ button[type=submit]:active {
 .app-footer {
   padding: var(--spacer);
   z-index: 10;
-  border-top: 1px solid #f5f5f5;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 .app-footer__layout {
   padding-bottom: env(safe-area-inset-bottom, 0);
@@ -1086,6 +1088,8 @@ button[type=submit]:active {
 .app-entry {
   --entry-shadow: none;
   --entry-rounded: .5rem;
+  --entry-padding: 1rem;
+  --entry-border: transparent;
   transition: all 0.3s ease-in-out;
   cursor: default;
   border-radius: 0.5rem;
@@ -1093,10 +1097,14 @@ button[type=submit]:active {
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--entry-border);
 }
 .app-entry:hover {
   --entry-rounded: .5rem .5rem 0 0;
-  --entry-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+  --entry-shadow: 0 0 1rem rgba(0, 0, 0 , 15%);
+}
+.app-entry-archive {
+  --entry-border: rgba(0, 0, 0, 15%) ;
 }
 .app-entry__fluid {
   flex: 1;
@@ -1128,7 +1136,7 @@ button[type=submit]:active {
 }
 .app-entry__content {
   border-radius: 0 0 0.5rem 0.5rem;
-  padding: 1rem;
+  padding: var(--entry-padding);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1140,7 +1148,7 @@ button[type=submit]:active {
 }
 .app-entry__title {
   --fs-h: var(--fs-5);
-  --line-margin: 0rem;
+  --line-margin: 0.5rem;
 }
 .app-entry__summary {
   --line-margin: 0;

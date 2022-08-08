@@ -37,8 +37,8 @@
   --size:1.25em;
   --border:transparent;
   --spacer:0.125em;
-  margin-top:-0.125em;
-  margin-bottom:calc(var(--spacer) / -1);
+  //margin-top:-0.125em;
+  //margin-bottom:calc(var(--spacer) / -1);
   padding:var(--spacer);
   border:var(--spacer) solid var(--border);
   border-radius:0.5em;

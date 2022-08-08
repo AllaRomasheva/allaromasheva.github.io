@@ -4,7 +4,7 @@
   @extend %flex-column;
   padding:var(--spacer);
   z-index: 10;
-  border-top: 1px solid #f5f5f5;
+  border-top: 1px solid rgba(0, 0, 0 , 15%);
   &__layout {
     @extend %layout;
     @extend %grid-rows;

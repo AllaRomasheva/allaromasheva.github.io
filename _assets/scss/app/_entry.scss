@@ -1,6 +1,8 @@
 .app-entry {
   --entry-shadow: none;
   --entry-rounded: .5rem;
+  --entry-padding: 1rem;
+  --entry-border: transparent;
   transition: all 0.3s ease-in-out;
   cursor: default;
   border-radius: .5rem;
@@ -8,10 +10,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  border:1px solid var(--entry-border);
 
   &:hover {
     --entry-rounded: .5rem .5rem 0 0;
-    --entry-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.1);
+    --entry-shadow: 0 0 1rem rgba(0, 0, 0 , 15%);
+  }
+
+  &-archive{
+    --entry-border: rgba(0, 0, 0, 15%)
   }
 
   &__fluid {
@@ -55,7 +62,7 @@
 
   &__content {
     border-radius: 0 0 .5rem .5rem;
-    padding: 1rem;
+    padding: var(--entry-padding);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -68,9 +75,10 @@
     margin-bottom:.5rem;
   }
 
+
   &__title {
     --fs-h: var(--fs-5);
-    --line-margin: 0rem;
+    --line-margin: 0.5rem;
   }
 
   &__summary {
