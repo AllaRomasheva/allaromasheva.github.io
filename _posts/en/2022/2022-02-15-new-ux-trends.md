@@ -19,6 +19,8 @@ updating the rules of work from home, we caught ourselves thinking about what 20
 come up with innovative products and rebuild existing ones. This year, let's rebuild with ourselves and understand
 who we are as designers and what makes us.
 
+[https://www.youtube.com/watch?v=YRIHdCJqQOg]()
+
 ### Login without password
 
 The average user uses at least 30 applications a month, and it is enough to remember each password
