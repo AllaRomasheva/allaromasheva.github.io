@@ -81,6 +81,11 @@
     --line-margin: 0.5rem;
   }
 
+  &__url{
+    --link-color: var(--color-primary);
+    --link-decoration: none;
+  }
+
   &__summary {
     --line-margin: 0;
     color: var(--color-dark);

@@ -4,14 +4,15 @@
 {%- assign image = post.image.path | defaults: post.image -%}
 {%- assign image = image | replace: 'i.imgur.com' , 'im.ksv.app/imgur' -%}
 {%- assign image = image | append: '?w=800&h=480' -%}
-<article class="app-entry">
+<article class="app-entry" itemscope="itemscope" itemtype="blogPost" itemtype="https://schema.org/BlogPosting">
+    <meta content="{{ image }}" itemprop="image_url">
     <div class="app-entry__cover">
         <div class="app-entry__image" data-cover="{{ image }}"></div>
     </div>
     <div class="app-entry__content">
-        <h3 class="app-entry__title">{{ post.title }}</h3>
-        <time class="app-entry__date">{% include dateformat value=post.date %}</time>
-        <p class="app-entry__summary">{{ summary }}</p>
+        <h3 class="app-entry__title" itemprop="name"><a class="app-entry__url" href="{{ url }}">{{ post.title }}</a></h3>
+        <time class="app-entry__date" itemprop="datePublished" datetime="{{ post.date }}">{% include dateformat value=post.date %}</time>
+        <p class="app-entry__summary" itemprop="articleBody">{{ summary }}</p>
     </div>
     <a class="app-entry__link" aria-label="{{ post.title }}" href="{{ url }}"></a>
 </article>

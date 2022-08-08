@@ -1179,6 +1179,10 @@ iframe {
   --fs-h: var(--fs-5);
   --line-margin: 0.5rem;
 }
+.app-entry__url {
+  --link-color: var(--color-primary);
+  --link-decoration: none;
+}
 .app-entry__summary {
   --line-margin: 0;
   color: var(--color-dark);
