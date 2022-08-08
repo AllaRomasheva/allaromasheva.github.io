@@ -45,6 +45,14 @@
   }
 }
 
+.app-recent{
+  max-width:48rem;
+  margin:0 auto;
+  display:grid;
+  grid-gap: var(--spacer);
+  grid-template-columns: 1fr;
+}
+
 button[data-share]{
   background-color:var(--color);
   border:0;

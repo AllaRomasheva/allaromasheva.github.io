@@ -4,7 +4,6 @@
         <div class="app-grid app-grid-archive">
             {% assign posts = site.posts | where_exp:'item', 'item.lang == page.lang' %}
             {% for post in posts %}
-                {% assign year = post.date |  da %}
                 {% include block/item.liquid %}
             {% endfor %}
         </div>

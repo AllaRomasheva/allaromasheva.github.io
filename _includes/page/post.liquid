@@ -24,5 +24,16 @@
                 </div>
             {% endif %}
         </article>
+
+        {% assign posts = site.posts | where_exp:'item', 'item.lang == page.lang' %}
+        {% assign posts = posts | where_exp:'item', 'item.url != page.url' %}
+        {% assign posts = posts | sort: 'date' | sample:5 %}
+
+        <div class="app-recent">
+            {% for post in posts %}
+                {% include block/item.liquid %}
+            {% endfor %}
+        </div>
+
     </div>
 </div>
