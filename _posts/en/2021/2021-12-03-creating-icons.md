@@ -25,9 +25,9 @@ Whether you are a design systems expert, illustrator or product designer, this g
 you will learn how to create icons, associate them with your brand and how to implement them into your design system.
 Let's start from the basics.
 
-<b>The main elements of the icons</b>
+## The main elements of the icons
 
-<b>Size</b>
+### Size
 
 Consistency and matching are key to icons, and all of your icons should be the same size when you create them.
 First, you need to make sure you know how your grid is built (multiples of 8 or 10?). Based on this, yours
@@ -47,7 +47,7 @@ When creating the same icon of different sizes, I prefer to start with the large
 It's much easier for me to remove details and simplify than to add as I grow. It also gives you a sense of object,
 before you really minimize it.
 
-<b>Color</b>
+### Color
 
 For product icons, use one color: black. If you add something other than that, your components will become too much
 complex and difficult for other designers. You can use two colors for marketing icons if it is important
@@ -56,7 +56,7 @@ there illustration, not an icon.
 
 {% include imgur src="Y2owaMt.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Grids</b>
+### Grids
 
 The pixel grid is the main grid that uses the smallest element: the pixel. When creating icons you always want
 align pixel grid objects, especially in straight lines. But you can create other shapes on the pixel grid
@@ -88,7 +88,7 @@ The visually dominant object should be centered both vertically and horizontally
 
 If you use a pixel grid and take advantage of the optical grid, you will be ahead.
 
-<b>Strokes and fillings</b>
+### Strokes and fillings
 
 Remember when I said that consistency is the key point? I say this again. Nothing bothers me more than two icons,
 where one is painted, and in another only the contour is executed. It is very important to make sure that all your icons
@@ -114,7 +114,7 @@ use in this space and what details you can add while maintaining clarity.
 I do not recommend making outline icons smaller than 10px (provided that the stroke width is 1px-2px). They are very
 difficult to decipher.
 
-<b>Choice of style</b>
+### Choice of style
 
 Your badges are a reflection of your brand. Starting with this work, it is important to understand the core values of
 your brand and what how they manifest visually. Some adjectives for reflection: hard / soft, ordinary / formal, luxurious
@@ -126,7 +126,7 @@ to install. So once you start creating simple icons, it will be easier than simp
 
 {% include imgur src="n3eP7rw.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Geometric shapes</b>
+### Geometric shapes
 
 If I'm not creating a very natural, organic style of icons, then I like to start with basic shapes to create
 shapes of my icons. Rectangles, squares and circles are great starting points for creating more sophisticated icons.
@@ -142,7 +142,7 @@ Instead, use a pixel grid to draw your rectangles at an angle
 
 {% include imgur src="Ii13H37.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Natural forms</b>
+### Natural forms
 
 It is easy to draw more natural shapes in Figma. You can use the traditional method of drawing curves point by point,
 or you can use the great tool Figma angular radius. I like to draw all my points in the form
@@ -152,12 +152,12 @@ the corners adjust to you.
 
 {% include imgur src="Mti6VZR.gif" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Kuti</b>
+### Angles
 
 There are several options for angles: beveled (square), beveled and rounded. I recommend you stick to one style for
 your icon set.
 
-<b>Angular radius</b>
+### Angular radius
 
 When using this to round squares and rectangles, you want to make sure that all your corners have the same
 radius. When creating concentric shapes, you need to adjust the radii of the corners to create perfect concentric shapes.
@@ -169,14 +169,14 @@ Any intermediate point on the path can be smoothed using the Angular Radius prop
 choose the whole path, it rounds all the corners equally. If you switch to edit mode, you can choose
 separate points and round them separately.
 
-<b>Painted objects</b>
+### Painted objects
 
 If your icons require painted objects inside basic shapes (such as windows in a house), ideally you
 you want to save the outline shapes in the shaded icons. And painted objects in painted icons. If you do not have
 places for contour shapes, you want to use painted shapes that are proportional to your contours. For example, if
 you have a contour width of 2px, you do not need painted shapes larger than 4x4px.
 
-<b>Metaphor</b>
+### Metaphor
 
 Metaphors are important in icons, we use them constantly, without even thinking. The home icon indicates the home page.
 An insect means a mistake. When scaling icons to create thumbnails, I prefer to keep in mind the metaphor (meaning),
@@ -188,7 +188,7 @@ which I use to pass the value of the icon.
 
 {% include imgur src="oAhrXU9.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Prospect</b>
+### Prospect
 
 Using perspective in icons is not easy - their size complicates the task, because drawing in perspective takes
 extra space. If you want to use perspective, or use it to scale and make it key
@@ -196,12 +196,12 @@ part of your system, or use it sparingly if it helps increase clarity and clarit
 
 {% include imgur src="HiSbHfR.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Font (avoid!)</b>
+### Font (avoid!)
 
 If possible, avoid using labels for icons. Icons must be global. If you need a font
 (for example, currency symbols), draw it yourself, instead of using a font.
 
-<b>Boolean operations</b>
+### Boolean operations
 
 Logical operations combine any set of layers of figures by means of one of four formulas: association, subtraction,
 intersection and exception. This tool is relevant and amazing. This is a great way to make your icons more changeable.
@@ -227,7 +227,7 @@ Exception: is the opposite of the intersection. The exception shows only those a
 When I'm done with the icons, I'd like to create styles for them, so when future designers adjust the color,
 it is easy to simply change one property (fill) instead of fills and strokes instead.
 
-<b>Network vector</b>
+### Network vector
 
 Vector networks are one of the most unique features in Figma. Most pen tools draw contours in a loop with a definite
 direction, always wanting to reconnect to their starting point. Vector networks do not have a direct and can
@@ -235,11 +235,11 @@ disintegrate in different directions without requiring the creation of a separat
 can be created inside the same object and with the same properties much faster than they can be drawn using
 traditional vector outline tools.
 
-<b>How to use icons in a design system</b>
+### How to use icons in a design system
 
 Making a set of badges available to the rest of your team is a matter of organization, asset management, and awareness.
 
-<b>Organization</b>
+### Organization
 
 Let's start with the file name. Your icons should be named based on what they show, not what they represent.
 For example, the stopwatch icon should be called a stopwatch, not a speed. A light bulb should be called a light bulb,
@@ -273,13 +273,17 @@ Adjusted images: If you have an icon with a visual option (for example, with mul
 you can use names to help differentiate using the same method as painted and
 contour icons.
 
-<b>Transfer your badges to other hands</b>
+### Transfer your badges to other hands
 
 You may be the biggest badge designer in the world, but if you can't incorporate your badges into your program /
 web page / direct mail program, it will not give anything. Talk to the team before you start designing
-engineers responsible for their implementation in the product. They will be able to provide you with information about the website or
+engineers responsible for their implementation in the product. 
+
+They will be able to provide you with information about the website or
 the program infrastructure that will determine some of your options, such as the width or size of the stroke. Ask others
-designers that have been done before to make sure you are not duplicating work. Find out from PMM what additional icons are
+designers that have been done before to make sure you are not duplicating work. 
+
+Find out from PMM what additional icons are
 they want to see. Be a friendly employee who is interested in feedback, advice and help.
 This will give you the best idea of what you need to do so that you do not have to redo the work and do not miss
 key tenants with whom other people have already agreed. And when you're ready to implement with your developers,

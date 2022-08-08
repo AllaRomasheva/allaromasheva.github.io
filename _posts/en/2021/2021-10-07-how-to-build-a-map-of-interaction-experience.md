@@ -27,7 +27,7 @@ focus their activities. Seeing the bigger picture, you can:
 - Identify opportunities for innovation
 - Understand where the user experience is currently well maintained
 
-<b>Conducting research</b>
+### Conducting research
 
 {% include imgur src="Alkq8iv.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
@@ -46,7 +46,7 @@ it is important to be the first on the market.
 An alternative approach is to interview two people. One person is responsible for conducting the interview, while
 the other makes detailed notes and notes. You can then use these records for analysis.
 
-<b>Research analysis</b>
+### Research analysis
 
 After the interview, open an Excel file or a Google spreadsheet. Comb your notes and choose what people do,
 feel and think.
@@ -62,14 +62,14 @@ Opinions: I believe that… Example: I believe that the quality does not meet th
 After you finish the analysis, write all the patterns of behavior and feelings on stickers for notes (post-it stickers).
 Delete "I" in the action list, and "I feel" in the recorded list of feelings to make the map less loaded and more legible.
 
-<b>Grouping of behavior and feelings</b>
+### Grouping of behavior and feelings
 
 Group what people do (behave) and feelings based on customer tasks. Depending on the product or service, you may have 40-80 tasks.
 An example of a goal is when people "pay for a good."
 
 {% include imgur src="ToTYAjs.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Highlighting priority behaviors and feelings</b>
+### Highlighting priority behaviors and feelings
 
 Under the tasks, place what people do (behavior), positive feelings and negative feelings.
 
@@ -78,7 +78,7 @@ often found in the comments.
 
 {% include imgur src="qpo87Mo.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>The order of tasks</b>
+### The order of tasks
 
 No customer will demonstrate all the types of behavior that may occur when interacting with a product or service.
 The card collects all kinds of behavior, feelings and thoughts of all customers. In addition, not all people have these tasks
@@ -93,14 +93,14 @@ Examples of names for stages: selection, purchase, etc.
 
 {% include imgur src="d66Elbc.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Company overview</b>
+### Company overview 
 
 If you have a representative of different departments of the company, it will help you understand the main features of the product that affect
 on user behavior.
 
 {% include imgur src="6aVG3M0.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Review of competitors</b>
+### Review of competitors
 
 Analyzing what your competitors are doing well is not so easy. The best way to do this is to do a longitudinal study.
 
@@ -120,7 +120,7 @@ will give much less understanding of what your competitors are offering to their
 
 {% include imgur src="MWhLHrH.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Adding opinions about a product or service</b>
+### Adding opinions about a product or service
 
 Now it's time to add what customers think of your product or service.
 
@@ -134,7 +134,7 @@ the point of view of its use.
 
 {% include imgur src="WW6GoG6.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Presentation of your company card</b>
+### Presentation of your company card
 
 Once the map is complete, brainstorm with product owners to discuss roadmap ideas.
 Imagine this map first, going through each phase, including the characteristics of your company and competitors.
@@ -145,14 +145,14 @@ you need to tell stories that you have heard during user research.
 By telling stories to management, you will increase the organization's closeness to customers and help them accept
 more informed decisions in the future.
 
-<b>Identifying opportunities</b>
+### Identifying opportunities
 
 Gaps will appear and show where a product or service does not match customer behavior. Strategically important issues
 will also become visible given the competition.
 
 {% include imgur src="zrsa1PN.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Creating a roadmap</b>
+### Creating a roadmap
 
 No matter how much evidence you present to the organization when it comes to creating a roadmap,
 you have to consider other factors that come into play. The map of the experience of interaction is not a solution
@@ -165,9 +165,9 @@ based on a set of criteria.
 Evaluation of potential projects is a subjective process, but the use of subject matter experts and any available ones
 data will help.
 
-<b>Example criteria:</b> Technical aspects.
+**Example criteria:** Technical aspects.
 
-<b> Subject Expert: </b> Lead Developer.
+**Subject Expert:** Lead Developer.
 
 Use separate tabs for expert comments to provide justification for each item. The man who will be
 make decisions, ask questions and study the topic further.
@@ -180,7 +180,7 @@ some parts of the work.
 
 At the end of the day, when you have a list of priority projects, you should make a plan based on what is most practical.
 
-<b> Example of an interaction experience map </b>
+### Example of an interaction experience map
 
 {% include imgur src="4oPHzl4.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 

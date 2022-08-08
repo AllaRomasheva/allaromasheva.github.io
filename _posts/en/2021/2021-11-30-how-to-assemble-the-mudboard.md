@@ -17,7 +17,7 @@ Sometimes it seems that mudboard is just a decoration, an afterthought, and some
 of creativity. Neither the first nor the second is true. In fact, mudboard is a pre-concept, the basis on which the
 project will grow.
 
-<b>Mudboard rules</b>
+### Mudboard rules
 
 Moodboard is a concentration of inspiration to create a new digital or material product, illustration, site, interior,
 you name it. Often such boards are collected not only "for the task", but also for the general mood, then inspiration
@@ -60,7 +60,7 @@ If you combine close-up and distant images, the volume will appear in the compos
 perception visual objects. For example, the lower left corner is always visually "deaf" - our eye never focuses on it,
 except specifically.
 
-<b>Analog vs digital mudboard</b>
+### Analog vs digital mudboard
 
 Gathering a concept in your head is a good start. But for the idea to begin to turn into something real, you need to
 visualize thoughts and images on the mudboard - physical or digital.
@@ -81,7 +81,7 @@ To share an analog mudboard, you need to take a picture of it first. And with th
 send links to others and edit the set collectively.
 There are dozens of services for creating mudboards, but the most convenient are:
 
-<b>Milanote</b> Mudboard service for creatives - designers, writers, photographers, marketers, agency teams.
+**Milanote** Mudboard service for creatives - designers, writers, photographers, marketers, agency teams.
 Here, literally everything is sharpened to create creative mudboards: there are dozens of templates for a photo, UI, logo,
 character creation or interior design, illustration:
 
@@ -97,7 +97,7 @@ processes, but for the assembly of mudboards will also be needed.
 Restrictions: In the free version, only three boards are available, which can be edited collectively. If you create a
 fourth, one of the first goes into view-only mode.
 
-<b>GoMoodboard</b> This service has a minimalist interface. It is suitable if you do not want to dive into the thin
+**GoMoodboard** This service has a minimalist interface. It is suitable if you do not want to dive into the thin
 settings, and you need to quickly sketch the concept and show it to someone. There is no registration here, special functions too:
 drag and drop in its pure form.
 
@@ -105,7 +105,7 @@ drag and drop in its pure form.
 
 Restriction: You can only upload images - and only in tile format.
 
-<b>Instagram</b> Social media accounts are a super obvious tool of mudboarding, which is not used very often at the same time.
+**Instagram** Social media accounts are a super obvious tool of mudboarding, which is not used very often at the same time.
 
 You can create a separate secret page for your mudboards (each time for a separate project). Or directly in your account
 make thematic selections of savings. Or pour ready-made mudboards on your page - and get them after a while
@@ -113,19 +113,19 @@ make thematic selections of savings. Or pour ready-made mudboards on your page -
 
 {% include imgur src="xtTncvk.jpg" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Create a mudboard in 3 steps</b>
+### Create a mudboard in 3 steps
 
 For example, you need to create a mudbrod for Nike AM 90 Infrared sneakers. According to the classics, a set of references is first created
 pictures, and only then the product on them, but we will go in the opposite direction.
 
-<b>Step 1</b> Find the association. This model of sneakers "stands on three whales": 1980s, Air Max model, intense red
+**Step 1** Find the association. This model of sneakers "stands on three whales": 1980s, Air Max model, intense red
 color. Therefore, all associations also lie in this plane: aggression, flame, rocket launch, the surface of the moon,
 craters, Tetris or games with 8-bit interface, lightsabers, "Star Wars", movies with the aesthetics of neo-noir and cyberpunk.
 
-<b>Step 2</b> Choose a palette. It also comes from associations: gray-gray, coal- (noir) -black, neon red.
+**Step 2** Choose a palette. It also comes from associations: gray-gray, coal- (noir) -black, neon red.
 You can extract them from the reference visuals.
 
-<b>Step 3</b> Choose a mudboard format. In the case of Nike AM 90 Infrared board is more convenient to assemble immediately
+**Step 3** Choose a mudboard format. In the case of Nike AM 90 Infrared board is more convenient to assemble immediately
 in digital (for example, in Milanote) - images are more important here than textures. But if you want to focus on the tactile part,
 then a physical board would be a good solution.
 

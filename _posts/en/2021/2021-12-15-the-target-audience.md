@@ -13,7 +13,7 @@ image:
     height: 400
 ---
 
-<b>How to determine the target audience?</b>
+### How to determine the target audience?
 
 The target audience or target group is a group of people who may be interested in the company's offer and will order in the future
 a specific service or product. It can become a potential consumer, so it is the target audience that should target everyone
@@ -38,7 +38,7 @@ Algorithm of actions will depend on the specifics of each product or service.
 
 {% include imgur src="AzGSB0e.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>How to segment the target audience?</b>
+### How to segment the target audience?
 
 Segmentation - the division of smaller groups based on different characteristics. These include:
 
@@ -56,7 +56,7 @@ costs and preparation of the offer, advertising certain groups.
 
 {% include imgur src="jZlX3Sc.jpg" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>How to gather the target audience?</b>
+### How to gather the target audience?
 
 You don't need to invent new ways to gather an audience - start with the sources you have at hand. For the absolute
 visualization and empathy creation uses the technique of creating a person. A virtual person is created who embodies

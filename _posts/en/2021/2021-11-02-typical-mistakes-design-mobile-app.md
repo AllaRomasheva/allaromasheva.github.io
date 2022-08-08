@@ -20,7 +20,7 @@ As a result, the results are far from ideal.
 The good news is that most mistakes are fairly common. Knowing the essence of the most common, you can avoid most problems.
 So, a list of eight that are best not to repeat.
 
-<b>1. Inexperienced architecture and navigation</b>
+### 1. Inexperienced architecture and navigation
 
 Just as you can't build a house without project drawings, you can't create a good UX design without sketches and prototypes.
 Otherwise it is necessary to redraw elements of the interface and to rewrite the code only for the reason that from the
@@ -30,7 +30,7 @@ The prototype should help visualize the user's route within the program, as well
 
 {% include imgur src="yP1kJp1.jpg" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>2. Sophisticated and confusing interface</b>
+### 2. Sophisticated and confusing interface
 
 Murphy's Law for Mobile Applications can be paraphrased something like this: "Anything that users may misunderstand
 they will misunderstand. "
@@ -46,7 +46,7 @@ Try to avoid obscure characters that can be interpreted ambiguously.
 
 {% include imgur src="fTff1J9.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>3. Lack of consistency</b>
+### 3. Lack of consistency
 
 Another common mistake is to use several different fonts and color schemes in the same style. User interface -
 this is not what makes the application stand out from other developments.
@@ -56,7 +56,7 @@ to one style, and then understand the purpose of the remaining elements elsewher
 
 {% include imgur src="RPwNu4M.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>4. Bad or absent Onboarding</b>
+### 4. Bad or absent Onboarding
 
 The first acquaintance with the application is the most important. During this time, a certain relationship is formed -
 whether it solves the problem, whether to use it in the future. "Where?", "How?" and especially "Why?" - questions of
@@ -72,7 +72,7 @@ application, step by step.
 
 {% include imgur src="Fv83X2q.jpg" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>5. Obsessive messages</b>
+### 5. Obsessive messages
 
 Abuse of notifications is like a very annoying acquaintance who can't understand hints about employment and
 inability to meet.
@@ -86,7 +86,7 @@ It's really interesting to know that you can buy three new characters in your ga
 
 {% include imgur src="0jF7jal.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>6. When the design is too much</b>
+### 6. When the design is too much
 
 Adding a unique style or creativity will never hurt. But often designers are too enthusiastic. Schemes, shadows,
 the presence of different styles can turn an icon or button into a surreal or just scary image.
@@ -100,7 +100,7 @@ surprised and disappointed. This happens quite often.
 
 {% include imgur src="uoldu3a.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>7. Lack of internal search</b>
+### 7. Lack of internal search
 
 Lack of content is wrong. However, there are things that are more problematic. For example, when there is too much
 content and files, and the ability to search the database is absent. Without integrated internal search, the user in this
@@ -114,7 +114,7 @@ the overall UX.
 
 {% include imgur src="BiOro2C.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>8. Inability to set priorities</b>
+### 8. Inability to set priorities
 
 When working on any design, it is important to identify the most important elements for users and the secondary ones that
 require it less attention. Unfortunately, many designers do not understand this concept. As a result, you have to deal
@@ -129,7 +129,7 @@ to which the user will pay attention.
 
 {% include imgur src="4nyM1Ch.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Analyze and work on errors</b>
+### Analyze and work on errors
 
 Mistakes are made by all without exception. It doesn't matter if you are a major publisher or an independent developer.
 Regardless of scale of the company, the basic rule remains the same: the more testing and analytical work,

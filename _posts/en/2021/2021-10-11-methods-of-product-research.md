@@ -13,15 +13,15 @@ image:
     height: 400
 ---
 
-<b>Often the manager or client does not believe in the benefits of research and is not willing to allocate a budget for
+Often the manager or client does not believe in the benefits of research and is not willing to allocate a budget for
     it. Therefore, projects rarely have funds for large-scale research. It seems that any product or UX study requires large
     budgets. But it does not. In this article Lead Product Designer in Amomedia, Genesis Andrew Zhulidin collected methods
     of food and UX-studies, which can be conducted almost free of charge, explained the essence of each of them, how to
-    conduct them, as well as added examples from my own practice.</b>
+    conduct them, as well as added examples from my own practice.
 
 The purpose of this article is to motivate and show that research can be budget-friendly and effective.
 
-<b>Online Ethnographic Research</b>
+## Online Ethnographic Research
 
 The main purpose of ethnographic research is to find out how people behave when no one is looking at them. This observation in
 the context in which they use the product. In the network you can "spy" what difficulties users face,
@@ -33,7 +33,7 @@ and thoughts. This information is a valuable source for insights. This method ca
 observation by users in the environment. It can be the starting point of the project, and on the basis of the received
 data it is possible to conduct in-depth research - to build "persons" or user segments.
 
-<b>How to conduct</b>
+### How to conduct
 
 - Find places on the web where your customers live: what forums and sites they visit, what newsletters they read.
 - Look at what consumers do on the Internet in everyday life. What do they read? What do they share with friends? What
@@ -43,7 +43,7 @@ Youtube, thematic pages in social networks, etc.
 - Find pain and insights in these messages. Highlight common tasks, topics and emotions, combine them. Collect as much as
 possible more information and highlight patterns that are repeated in your records.
 
-<b>Case study</b>
+### Case study
 
 I unconsciously used this technique before I learned about it from the book. Then it was less conscious and structured.
 I now use this method when starting a new project or before conducting in-depth interviews. For example, the past
@@ -55,13 +55,13 @@ give me a starting point for defining key custom tasks.
 
 {% include imgur src="imeRVst.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Questionnaires</b>
+### Questionnaires
 
 Questionnaires are a universal tool that is widely used for various types of research. With their help it is possible
 test visual design (UI), build information architecture, find important product features, measure
 usability and much more.
 
-<b>How to conduct</b>
+### How to conduct
 
 - Formulate the purpose of the study, it will depend on the type of questionnaire and question.
 - Formulate questions and answer options.
@@ -69,7 +69,7 @@ usability and much more.
 questionnaire on thematic platforms, where the target audience "lives".
 - Analyze the results.
 
-<b>Case study</b>
+### Case study
 
 Now in the product we use paid services for conducting surveys, because we need advanced tools,
 which they offer. But for personal purposes, I still use regular Google Forms. They cope perfectly with
@@ -78,13 +78,13 @@ educational EdTech product.
 
 {% include imgur src="cXQK50F.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Reports and analytics from research companies</b>
+## Reports and analytics from research companies
 
 Research companies publish detailed reports on people's habits, user experience and benchmarks. Such reports help
 see trends, learn the habits of the target audience or study expert opinion. They can be very helpful on
 early stages of product development. Please note that not all of them are free.
 
-<b>How to conduct</b>
+### How to conduct
 
 - Find a suitable company.
 - Examine all reports and formulate insights.
@@ -95,13 +95,13 @@ For example, if you are developing an e-commerce product, use research from the 
 You will find a lot of useful information about UX in e-commerce. In research from Nielsen you can learn about
 sports fans and betting. In reports from App Annie - about the mobile user experience.
 
-<b>Case study</b>
+### Case study
 
 When I was working on a mobile content product, I needed to know the literary preferences of the target audience.
 There was also advertising monetization in this product, and it was necessary to study how our CA relates to advertising.
 Everything you need information I found in reports from Nielsen and Nielsen Norman Group.
 
-<b>Interviews and usability testing</b>
+## Interviews and usability testing
 
 In-depth interviews are one of the basic methods of a UX researcher. It helps to learn more about users, their expectations,
 needs, motivation and previous experience, and then build custom mental models.
@@ -111,7 +111,7 @@ in the topic of people who are ready to help for free. Respondents and the servi
 find, for each session. But if you are willing to spend a little of your time, you can do without expensive services and
 agencies search for respondents.
 
-<b>How to conduct</b>
+### How to conduct
 
 - If you have a finished product, ask users for help, offer them a subscription to the product or a gift in
 in the form of a branded souvenir. If you don't have a product yet, find motivated and interested respondents on the topic at
@@ -120,7 +120,7 @@ thematic platforms.
 compared to specialty products, but save budget.
 - Analysis of results: interpret, structure and highlight key points.
 
-<b>Case study</b>
+### Case study
 
 Speed is important to us in working projects, so we are ready to allocate a budget for recruiting respondents. But in personal
 projects I use the scheme described above. For example, while studying design thinking in IDEO U I needed
@@ -129,7 +129,7 @@ could find respondents. So I found the right people and saved the budget.
 
 {% include imgur src="O9kawcJ.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Online mentions and contacting support</b>
+## Online mentions and contacting support
 
 If your product is already running, it's likely that users have already started generating feedback about it. They write in
 product support service, probably complain or praise it on social networks and in app stores,
@@ -137,7 +137,7 @@ mentioned in personal blogs.
 
 If your product has not yet been launched, you can study your future competitors in this way.
 
-<b>How to conduct</b>
+### How to conduct
 
 - Contact your product support, if available. Probably, there are a lot of requests from users:
 they share problems, ask about product features, suggest improvements. The support system categorizes all requests
@@ -148,7 +148,7 @@ not only about your product, but also about competitors.
 selections with mentions and send messages.
 - Analyze the information received.
 
-<b>Case study</b>
+### Case study
 
 Contacting support can help you choose what to implement in the first place. For example, after the implementation of and
 Launching the MVP version of one of our mobile weight loss products, we have received hundreds of requests to add a specific
@@ -159,7 +159,7 @@ interview.
 
 {% include imgur src="qeqWEUm.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>Guerrilla user testing or "corridor" testing</b>
+## Guerrilla user testing or "corridor" testing
 
 The most accurate definition of guerrilla usability research was formulated by Martin Bellam: the art of attacking lonely
 people in cafes and public places and quickly shoot them while they use the website for a few minutes.
@@ -174,7 +174,7 @@ stranger and find contact with him.
 An alternative to the method may be the so-called "corridor" inspections or testing with colleagues. It is easier to find
 contact with them,but it is possible that they will be afraid to offend you and will not be able to give an objective assessment.
 
-<b>How to conduct</b>
+### How to conduct
 
 - Before you start testing, you must have the finished product or its prototype in any form.
 - Find a public place.
@@ -185,7 +185,7 @@ contact with them,but it is possible that they will be afraid to offend you and 
 - Ask about experience.
 - Thank you and treat yourself to a cup of coffee or something else 🙂
 
-<b>Case study</b>
+### Case study
 
 When I was a freelancer, I often held coworking meetings. After the next meeting and discussion of the sales site
 cosmetics for a wide target audience, I stayed in coworking and decided to conduct guerrilla research. I showed

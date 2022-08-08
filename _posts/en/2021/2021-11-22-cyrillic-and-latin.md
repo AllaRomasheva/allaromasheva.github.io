@@ -25,7 +25,7 @@ Therefore, it is more practical to consider individual languages than the entire
 The results of this study will be useful to those who create new fonts or Cyrillic on the basis of Latin, as well as simple
 designers who are afraid to work with Cyrillic.
 
-<b>Letters and words of the Ukrainian language</b>
+### Letters and words of the Ukrainian language
 
 Grammar and spelling determine the nature of words, the distribution of letters. These features are unique to each language.
 Therefore, first than to think about the Cyrillic alphabet, it is necessary to consider what graphemes it gives to a
@@ -73,7 +73,7 @@ Test words for early font sketches can also be improved by taking into account t
 Nobelfeik presents 46% of Ukrainian-language texts and almost all types of graphemes of the Ukrainian alphabet. Not bad
 for one word. But Noberwoodlike covers 62% of the body, all forms and external elements, being only two letters longer.
 
-<b>Form and plasticity of letters of the Ukrainian alphabet</b>
+### Form and plasticity of letters of the Ukrainian alphabet
 
 Every designer at least once scolded the Cyrillic alphabet for the shape and plasticity of the letters. It is considered
 a fence, and rightly so. But before to announce the verdict, it is necessary to examine the evidence and understand what
@@ -115,7 +115,7 @@ The first idea is somewhat archaic, it involves a return to the sources, to the 
 idea is progressive and a little Tolkien. Her supporters say we need to switch to Latin to finally break with Russia and
 to fall under the influence of Western civilization, as if Latin is the magic language of the higher elves.
 
-<b>Ukrainian Latin</b>
+### Ukrainian Latin
 
 To switch to Latin, Ukraine needs to spend billions of dollars and a couple of decades. During this time you will have
 to do a few "Steps towards people":
@@ -142,7 +142,7 @@ By the way, you can switch to Latin in several ways. Take for example the two mo
 Ukrainian language: the international standard ISO 9 and "national transliteration" - and we will study them taking into
 account the frequency language analysis.
 
-<b>National transliteration of the Ukrainian language</b>
+### National transliteration of the Ukrainian language
 
 Today in Ukraine there is a procedure for transliteration of the Ukrainian alphabet adopted by the Cabinet of Ministers in 2010.
 
@@ -159,7 +159,7 @@ entered letter combinations ia, ch, kh, zh, iu, sh, ts, yi, shch, ie;
 - The number of remote elements has increased, but they have become more identical. In 99.85% of texts only verticals are
 used (as in h, k) and overhang (as in y). A large number of any identical elements reduces the speed of word recognition.
 
-<b>Transliteration according to ISO 9</b>
+### Transliteration according to ISO 9
 
 The international standard ISO 9 defines the method of transliteration of Cyrillic alphabets.
 
@@ -186,7 +186,7 @@ became very civilized and unlike the Russians. But it turned out that to underst
 writing, and European languages. Meanwhile, the whole world has not used writing for 10 years, the interfaces of all
 devices are voice or visual, and machine translation has virtually removed the language barrier.
 
-<b>Improving the graphemes of the Ukrainian Cyrillic alphabet</b>
+### Improving the graphemes of the Ukrainian Cyrillic alphabet
 
 There is another way to solve the problems of the Ukrainian alphabet and keep in touch with tradition. We will make minimal
 changes in graphemes, based on their problems and frequency of use in the corpus of speech.
@@ -241,7 +241,7 @@ counterpart by more than 10%. There are many reasons for this, among them:
 - Compact apostrophe instead of separating soft and hard characters;
 - The word "is" instead of the word "is" and "is", "what" instead of "what", "how" instead of "how".
 
-<b>Rhythm of a line in Ukrainian-language texts</b>
+### Rhythm of a line in Ukrainian-language texts
 
 Frequency vocabulary allows you to more objectively assess not only the grapheme, but also some features of the language
 at the typographic level. A language can consist of hundreds of thousands of words, but not all words are equally useful

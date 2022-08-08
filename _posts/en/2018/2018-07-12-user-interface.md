@@ -50,13 +50,9 @@ use the UI-kit, your interface will look like a vinaigrette of different buttons
 a single understanding what this or that element means. So, his reaction to your site will be something like this:
 
 - Hmm, it's a button. - picture for example.
-
 - And this is not a button. - picture for example.
-
 - And this is the button again. But they are different. - picture for example.
-
 - Is this a button or not? Why are they all different? - picture for example.
-
 - Does this button work not as a button, but as a switch? - picture for example.
 
 {% include imgur src="oEjhYiG.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}

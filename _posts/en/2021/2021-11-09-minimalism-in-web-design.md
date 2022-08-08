@@ -13,20 +13,21 @@ image:
     height: 400
 ---
 
-<b>Minimalism in web design</b>
+## Minimalism in web design
 
 The minimalist style on the site is reflected in the conciseness and simplicity of the composition. The design is based
 on neutral colors, simple geometric shapes. Constructivism and functionalism are the origins of modern minimalism.
 
-<b>The concept of minimalism in web design</b>
+##  The concept of minimalism in web design
 
 The main principle of minimalism is to keep in mind only important content. Additional effects, unnecessary animation
 overload the site, distract the user. Relevant images and content will immediately make it clear for what purposes
 site created.
 
-<b>Distinctive features of minimalism</b>
+## Distinctive features of minimalism
 
 Minimalism can be distinguished from other web design styles on several grounds:
+
 - background;
 - color;
 - photos and textures;
@@ -34,7 +35,7 @@ Minimalism can be distinguished from other web design styles on several grounds:
 - grid;
 - navigation.
 
-<b>1. Use of negative space</b>
+### 1. Use of negative space
 
 One of the main components in a minimalist design - a negative space - an empty, unoccupied space between
 elements on the page. It is used for
@@ -46,7 +47,7 @@ color background.
 
 {% include imgur src="kxtADjK.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>2. Flat design and texture</b>
+### 2. Flat design and texture
 
 Minimalism design style uses flat textures. The goal is to get rid of unnecessary details. Three-dimensional effects, gradients,
 shadows are rarely used. In a flat design, everything is minimized - fonts, icons. It is aesthetically pleasing and functional.
@@ -57,10 +58,11 @@ shadows are rarely used. In a flat design, everything is minimized - fonts, icon
 
 {% include imgur src="Y3nnswV.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>3. Monochrome palette, minimum color</b>
+### 3. Monochrome palette, minimum color
 
 Color has the ability to make a visual accent, but it can also distract the user. That's why designers are creating
 minimalist site, often choose a limited palette:
+
 - monochrome palette - one color;
 - use of two colors;
 - no more than three colors.
@@ -77,7 +79,7 @@ bright.
 
 {% include imgur src="L4TjsFU.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>4. Photos and illustrations</b>
+### 4. Photos and illustrations
 
 Photos and illustrations are important design elements in the style of minimalism. They can convey more thoughts and emotions,
 than words. But the images used must comply with the principles of minimalism. If a photo or illustration
@@ -95,7 +97,7 @@ a minimalist site will not be boring.
 
 {% include imgur src="5prrbwn.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-<b>5. Spectacular typography</b>
+### 5. Spectacular typography
 
 Minimalism is a style where content comes first. The main thing is to draw it up and submit it correctly.
 
@@ -131,7 +133,7 @@ Importantly! Bold typing is appropriate when the text contains important informa
 There is a fine line between a creative, well-thought-out font solution and eye-cutting text. Not sure of the result -
 better not risk.
 
-<b>6. Contrast</b>
+### 6. Contrast
 
 Contrast between components is another way to emphasize important content, to quickly convey an opinion to the user.
 
@@ -143,7 +145,7 @@ beat a simple item. Contrast is a great way to focus the viewer's attention on t
 For example, it could be a large black text on a colored background or another combination of elements highlighted by a
 change sizes, colors, textures.
 
-<b>7. Net</b>
+### 7. Net
 
 A modular grid is usually used in a minimalist design. There is also a design with a hierarchical structure
 or a simplified version - a columnar grid.
@@ -152,7 +154,7 @@ or a simplified version - a columnar grid.
 
 All options help to organize content in space, it is advantageous to submit it on the site.
 
-<b>8. Clear navigation</b>
+### 8. Clear navigation
 
 In a minimalist site usability comes first. It is easier for the visitor to navigate when the site is not overloaded
 elements and details.
