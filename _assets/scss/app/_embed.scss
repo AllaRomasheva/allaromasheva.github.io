@@ -1,0 +1,29 @@
+.embed{
+
+}
+
+iframe{
+  border:0;
+}
+
+.embed.twitter{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.embed.youtube{
+  position: relative;
+  &:before{
+    content:'';
+    display: block;
+    padding-top:calc( 1% * ( (9/16) * 100) )
+  }
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

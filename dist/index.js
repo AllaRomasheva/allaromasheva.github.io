@@ -13,7 +13,7 @@ var _bind = require("../utils/bind");
   }
 });
 
-},{"../utils/bind":7}],2:[function(require,module,exports){
+},{"../utils/bind":8}],2:[function(require,module,exports){
 "use strict";
 
 var _find = require("../utils/find");
@@ -42,7 +42,369 @@ if ('IntersectionObserver' in window) {
   (0, _find.find)('[data-cover]').forEach(cover);
 }
 
-},{"../utils/find":9}],3:[function(require,module,exports){
+},{"../utils/find":10}],3:[function(require,module,exports){
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+
+var _wrapNativeSuper2 = _interopRequireDefault(require("@babel/runtime/helpers/wrapNativeSuper"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var isFunction = function isFunction(v) {
+  return typeof v === 'function';
+};
+
+var hasProp = function hasProp(o, v) {
+  return o && o.hasOwnProperty(v);
+};
+
+var stringFormat = function stringFormat(value, params, regexp) {
+  regexp = regexp || /{{(.+?)}}/g;
+  return value.replace(regexp, function (match, prop) {
+    prop = prop.trim();
+
+    if (isFunction(params)) {
+      return params(prop) || match;
+    } else {
+      return (0, _typeof2["default"])(prop) in params ? params[prop] : match;
+    }
+  });
+};
+
+var getPath = function getPath(path, context) {
+  var props = path.trim().split('.');
+  var root = context || window;
+  var first = props.shift();
+  var value = null;
+
+  if (hasProp(root, first)) {
+    value = root[first];
+    props.forEach(function (name) {
+      value = hasProp(value, name) ? value[name] : null;
+    });
+  }
+
+  return value;
+};
+
+var createElement = function createElement(name) {
+  var attr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var element = document.createElement(name);
+  Object.entries(attr).forEach(function (_ref) {
+    var _ref2 = (0, _slicedToArray2["default"])(_ref, 2),
+        name = _ref2[0],
+        value = _ref2[1];
+
+    element.setAttribute(name, value);
+  });
+  return element;
+};
+
+var parseUrl = function parseUrl(value) {
+  var link = createElement('a', {
+    href: value
+  });
+  var origin = link.origin,
+      hostname = link.hostname,
+      href = link.href,
+      host = link.host,
+      pathname = link.pathname,
+      search = link.search,
+      hash = link.hash;
+  return {
+    origin: origin,
+    hostname: hostname,
+    pathname: pathname,
+    href: href,
+    hash: hash,
+    host: host,
+    search: search,
+    query: parseQuery(search),
+    path: pathname.split('/').filter(function (i) {
+      return i;
+    })
+  };
+};
+
+var parseQuery = function parseQuery(search) {
+  var params = {};
+
+  if (search.charAt(0) === '?') {
+    search = search.slice(1);
+  }
+
+  if (search === '') {
+    return params;
+  }
+
+  search.split('&').forEach(function (chunk) {
+    var _chunk$split = chunk.split('='),
+        _chunk$split2 = (0, _slicedToArray2["default"])(_chunk$split, 2),
+        name = _chunk$split2[0],
+        value = _chunk$split2[1];
+
+    if (value === undefined) {
+      if (name) {
+        value = true;
+      } else {
+        return;
+      }
+    }
+
+    name = decodeURIComponent(name).trim();
+    value = decodeURIComponent(value).trim();
+    params[name] = value;
+  });
+  return params;
+};
+
+var scripts = [];
+
+var arrayFind = function arrayFind(array, callback) {
+  return array.filter(callback).shift();
+};
+
+var getScript = function getScript(endpoint) {
+  if (endpoint in scripts) {
+    return scripts[endpoint];
+  }
+
+  scripts[endpoint] = new Promise(function (resolve, reject) {
+    var script = createElement('script', {
+      async: true,
+      src: endpoint
+    });
+    script.addEventListener('load', resolve);
+    script.addEventListener('error', reject);
+    document.body.appendChild(script);
+  });
+  return scripts[endpoint];
+};
+
+var getJsonCallback = function getJsonCallback(endpoint, params) {};
+
+var providers = [];
+
+var EmbedProvider = /*#__PURE__*/function () {
+  function EmbedProvider(element, config, params) {
+    (0, _classCallCheck2["default"])(this, EmbedProvider);
+    this.element = element;
+    this.config = config;
+    this.params = params;
+    this.render();
+  }
+
+  (0, _createClass2["default"])(EmbedProvider, [{
+    key: "format",
+    value: function format(string) {
+      var _this = this;
+
+      return stringFormat(string, function (prop) {
+        return getPath(prop, _this);
+      });
+    }
+  }, {
+    key: "scope",
+    value: function scope(namespace) {
+      return getPath(namespace);
+    }
+  }, {
+    key: "endpoint",
+    value: function endpoint() {
+      var url = this.config.endpoint;
+      return url ? getScript(this.format(url)) : Promise.resolve();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      this.modify();
+      this.template();
+      this.endpoint().then(function () {
+        _this2.callback();
+      });
+    }
+  }, {
+    key: "modify",
+    value: function modify() {
+      this.url = this.params.href;
+
+      if (isFunction(this.config.modify)) {
+        this.url = this.config.modify.call(this, this.params);
+      }
+    }
+  }, {
+    key: "template",
+    value: function template() {
+      this.html = '';
+
+      if (isFunction(this.config.template)) {
+        this.html = this.format(this.config.template.call(this));
+      }
+
+      this.element.innerHTML = this.html;
+    }
+  }, {
+    key: "callback",
+    value: function callback() {
+      if (isFunction(this.config.callback)) {
+        this.config.callback.call(this);
+      }
+    }
+  }]);
+  return EmbedProvider;
+}();
+
+providers.push({
+  name: 'youtube',
+  hosts: ['www.youtube.com', 'youtu.be'],
+  modify: function modify(params) {
+    var _params$path = (0, _slicedToArray2["default"])(params.path, 2),
+        pathId = _params$path[1];
+
+    var queryId = params.query.v;
+    var id = pathId || queryId || false;
+    return id ? "//www.youtube.com/embed/".concat(id, "?wmode=transparent") : false;
+  },
+  template: function template() {
+    return "<iframe src=\"{{ url }}\"\n                    loading=\"lazy\" \n                    allowfullscreen>\n                </iframe>";
+  }
+});
+providers.push({
+  name: 'telegram',
+  hosts: ['t.me'],
+  endpoint: '//telegram.org/js/telegram-widget.js',
+  modify: function modify(params) {
+    var _params$path2 = (0, _slicedToArray2["default"])(params.path, 2),
+        channel = _params$path2[0],
+        post = _params$path2[1];
+
+    return [channel, post].join('/');
+  },
+  template: function template() {
+    return "<blockquote class=\"telegram-post\" \n                    data-width=\"100%\" \n                    data-telegram-post=\"{{ url }}\">\n                </blockquote>";
+  }
+});
+providers.push({
+  name: 'instagram',
+  hosts: ['www.instagram.com', 'instagram.com', 'instagr.am'],
+  endpoint: '//platform.instagram.com/{{ config.locale }}/embeds.js',
+  locale: 'uk_UA',
+  version: 14,
+  template: function template() {
+    return "<blockquote class=\"instagram-media\" \n                data-instgrm-captioned \n                data-instgrm-permalink=\"{{ url }}\" \n                data-instgrm-version=\"{{ config.version }}\">\n                </blockquote>";
+  }
+});
+providers.push({
+  name: 'facebook',
+  hosts: ['www.facebook.com', 'facebook.com', 'fb.com'],
+  endpoint: '//connect.facebook.net/{{ config.locale }}/sdk.js#xfbml=1&version=v14.0',
+  locale: 'uk_UA',
+  template: function template() {
+    return "<div class=\"fb-post\" \n                data-show-text=\"true\" \n                data-width=\"auto\" \n                data-href=\"{{ url }}\">\n                </div>";
+  },
+  callback: function callback() {
+    var sdk = this.scope('instgrm.Embeds');
+    if (sdk) sdk.process();
+  }
+});
+providers.push({
+  name: 'twitter',
+  hosts: ['twitter.com'],
+  endpoint: '//platform.twitter.com/widgets.js',
+  modify: function modify(params) {
+    return params.href;
+  },
+  template: function template() {
+    return "<blockquote class=\"twitter-tweet\">\n                <a href=\"{{ url }}\"></a>\n                </blockquote>";
+  },
+  callback: function callback() {
+    var sdk = this.scope('twttr.widgets');
+    if (sdk) sdk.load();
+  }
+});
+
+var EmbedElement = /*#__PURE__*/function (_HTMLElement) {
+  (0, _inherits2["default"])(EmbedElement, _HTMLElement);
+
+  var _super = _createSuper(EmbedElement);
+
+  function EmbedElement() {
+    var _this3;
+
+    (0, _classCallCheck2["default"])(this, EmbedElement);
+    _this3 = _super.call(this);
+
+    _this3.match();
+
+    return _this3;
+  }
+
+  (0, _createClass2["default"])(EmbedElement, [{
+    key: "match",
+    value: function match() {
+      var params = parseUrl(this.getAttribute('url'));
+      var config = arrayFind(providers, function (config) {
+        return config.hosts.indexOf(params.host) >= 0;
+      });
+
+      if (config) {
+        new EmbedProvider(this, config, params);
+      }
+    }
+  }]);
+  return EmbedElement;
+}( /*#__PURE__*/(0, _wrapNativeSuper2["default"])(HTMLElement));
+
+var embedElements = function embedElements(selector, getUrl, getWrapper) {
+  var list = [].slice.call(document.querySelectorAll(selector));
+  list.forEach(function (el) {
+    var url = getUrl(el);
+
+    if (url) {
+      var params = parseUrl(url);
+      var config = arrayFind(providers, function (config) {
+        return config.hosts.indexOf(params.host) >= 0;
+      });
+
+      if (config) {
+        el = getWrapper(el);
+        el.classList.add(config.name);
+        new EmbedProvider(el, config, params);
+      }
+    }
+  });
+};
+
+embedElements('p > a:only-child', function (el) {
+  return el.getAttribute('href') || el.innerText;
+}, function (el) {
+  var parent = el.parentNode;
+  var wrapper = document.createElement('figure');
+  wrapper.classList.add('embed');
+  parent.parentNode.replaceChild(wrapper, parent);
+  return wrapper;
+});
+
+},{"@babel/runtime/helpers/classCallCheck":14,"@babel/runtime/helpers/createClass":16,"@babel/runtime/helpers/getPrototypeOf":17,"@babel/runtime/helpers/inherits":18,"@babel/runtime/helpers/interopRequireDefault":19,"@babel/runtime/helpers/possibleConstructorReturn":24,"@babel/runtime/helpers/slicedToArray":26,"@babel/runtime/helpers/typeof":27,"@babel/runtime/helpers/wrapNativeSuper":29}],4:[function(require,module,exports){
 "use strict";
 
 var _debounce = require("../utils/debounce");
@@ -102,6 +464,7 @@ var match = function match() {
     el.classList.remove('active');
     expr = el.getAttribute('data-rel');
     attr = el.getAttribute('href');
+    if (attr === '') return;
     if (attr === '#') return;
     return expr ? href.match(expr) : el.href ? href.indexOf(attr) !== -1 : false;
   }).map(function (el) {
@@ -122,7 +485,7 @@ window.addEventListener('load', callback, {
 });
 match();
 
-},{"../utils/bind":7,"../utils/debounce":8}],4:[function(require,module,exports){
+},{"../utils/bind":8,"../utils/debounce":9}],5:[function(require,module,exports){
 "use strict";
 
 var _debounce = require("../utils/debounce");
@@ -161,7 +524,7 @@ window.addEventListener('scroll', callback, {
 });
 scroller();
 
-},{"../utils/debounce":8}],5:[function(require,module,exports){
+},{"../utils/debounce":9}],6:[function(require,module,exports){
 "use strict";
 
 var _bind = require("../utils/bind");
@@ -245,7 +608,7 @@ var popup = function popup(url, params) {
   });
 });
 
-},{"../utils/bind":7,"../utils/find":9}],6:[function(require,module,exports){
+},{"../utils/bind":8,"../utils/find":10}],7:[function(require,module,exports){
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
@@ -262,9 +625,11 @@ require("./component/share");
 
 require("./component/cover");
 
+require("./component/embed");
+
 _smoothscrollPolyfill["default"].polyfill();
 
-},{"./component/card":1,"./component/cover":2,"./component/hashchange":3,"./component/scroll":4,"./component/share":5,"@babel/runtime/helpers/interopRequireDefault":10,"smoothscroll-polyfill":11}],7:[function(require,module,exports){
+},{"./component/card":1,"./component/cover":2,"./component/embed":3,"./component/hashchange":4,"./component/scroll":5,"./component/share":6,"@babel/runtime/helpers/interopRequireDefault":19,"smoothscroll-polyfill":30}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -281,7 +646,7 @@ function bind(parent, event, selector, callback) {
   }, true);
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -306,7 +671,7 @@ function debounce(fn) {
   };
 }
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -324,7 +689,124 @@ function find(selector, parent) {
   return Array.from((parent || document).querySelectorAll(selector));
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+module.exports = _arrayLikeToArray;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],12:[function(require,module,exports){
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],13:[function(require,module,exports){
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+module.exports = _assertThisInitialized;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],14:[function(require,module,exports){
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],15:[function(require,module,exports){
+var setPrototypeOf = require("./setPrototypeOf.js");
+
+var isNativeReflectConstruct = require("./isNativeReflectConstruct.js");
+
+function _construct(Parent, args, Class) {
+  if (isNativeReflectConstruct()) {
+    module.exports = _construct = Reflect.construct;
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  } else {
+    module.exports = _construct = function _construct(Parent, args, Class) {
+      var a = [null];
+      a.push.apply(a, args);
+      var Constructor = Function.bind.apply(Parent, a);
+      var instance = new Constructor();
+      if (Class) setPrototypeOf(instance, Class.prototype);
+      return instance;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }
+
+  return _construct.apply(null, arguments);
+}
+
+module.exports = _construct;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./isNativeReflectConstruct.js":21,"./setPrototypeOf.js":25}],16:[function(require,module,exports){
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],17:[function(require,module,exports){
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],18:[function(require,module,exports){
+var setPrototypeOf = require("./setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inherits;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./setPrototypeOf.js":25}],19:[function(require,module,exports){
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
     "default": obj
@@ -333,7 +815,198 @@ function _interopRequireDefault(obj) {
 
 module.exports = _interopRequireDefault;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-},{}],11:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
+function _isNativeFunction(fn) {
+  return Function.toString.call(fn).indexOf("[native code]") !== -1;
+}
+
+module.exports = _isNativeFunction;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],21:[function(require,module,exports){
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+module.exports = _isNativeReflectConstruct;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],22:[function(require,module,exports){
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],23:[function(require,module,exports){
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableRest;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],24:[function(require,module,exports){
+var _typeof = require("@babel/runtime/helpers/typeof")["default"];
+
+var assertThisInitialized = require("./assertThisInitialized.js");
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./assertThisInitialized.js":13,"@babel/runtime/helpers/typeof":27}],25:[function(require,module,exports){
+function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _setPrototypeOf(o, p);
+}
+
+module.exports = _setPrototypeOf;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],26:[function(require,module,exports){
+var arrayWithHoles = require("./arrayWithHoles.js");
+
+var iterableToArrayLimit = require("./iterableToArrayLimit.js");
+
+var unsupportedIterableToArray = require("./unsupportedIterableToArray.js");
+
+var nonIterableRest = require("./nonIterableRest.js");
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./arrayWithHoles.js":12,"./iterableToArrayLimit.js":22,"./nonIterableRest.js":23,"./unsupportedIterableToArray.js":28}],27:[function(require,module,exports){
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{}],28:[function(require,module,exports){
+var arrayLikeToArray = require("./arrayLikeToArray.js");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+}
+
+module.exports = _unsupportedIterableToArray;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./arrayLikeToArray.js":11}],29:[function(require,module,exports){
+var getPrototypeOf = require("./getPrototypeOf.js");
+
+var setPrototypeOf = require("./setPrototypeOf.js");
+
+var isNativeFunction = require("./isNativeFunction.js");
+
+var construct = require("./construct.js");
+
+function _wrapNativeSuper(Class) {
+  var _cache = typeof Map === "function" ? new Map() : undefined;
+
+  module.exports = _wrapNativeSuper = function _wrapNativeSuper(Class) {
+    if (Class === null || !isNativeFunction(Class)) return Class;
+
+    if (typeof Class !== "function") {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    if (typeof _cache !== "undefined") {
+      if (_cache.has(Class)) return _cache.get(Class);
+
+      _cache.set(Class, Wrapper);
+    }
+
+    function Wrapper() {
+      return construct(Class, arguments, getPrototypeOf(this).constructor);
+    }
+
+    Wrapper.prototype = Object.create(Class.prototype, {
+      constructor: {
+        value: Wrapper,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+    return setPrototypeOf(Wrapper, Class);
+  };
+
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _wrapNativeSuper(Class);
+}
+
+module.exports = _wrapNativeSuper;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+},{"./construct.js":15,"./getPrototypeOf.js":17,"./isNativeFunction.js":20,"./setPrototypeOf.js":25}],30:[function(require,module,exports){
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
 (function () {
   'use strict';
@@ -768,5 +1441,5 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 }());
 
-},{}]},{},[6])
+},{}]},{},[7])
 

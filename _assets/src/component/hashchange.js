@@ -45,6 +45,7 @@ const match = () => {
         el.classList.remove('active');
         expr = el.getAttribute('data-rel');
         attr = el.getAttribute('href');
+        if( attr === '' ) return;
         if( attr === '#') return;
         return expr ? href.match(expr) : el.href ? href.indexOf(attr) !== -1 : false;
     }).map(function (el) {

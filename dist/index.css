@@ -804,6 +804,32 @@ button[type=submit]:active {
   transform: perspective(64rem) rotateX(18deg);
 }
 
+iframe {
+  border: 0;
+}
+
+.embed.twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.embed.youtube {
+  position: relative;
+}
+.embed.youtube:before {
+  content: "";
+  display: block;
+  padding-top: calc( 1% * ( (9/16) * 100) );
+}
+.embed.youtube > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .app-page__layout, .app-footer__layout, .app-header__layout, .app-layout {
   position: relative;
   margin: 0 auto;
