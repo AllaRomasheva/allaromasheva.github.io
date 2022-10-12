@@ -20,8 +20,10 @@ exclude:
 markdown: kramdown
 port: 4002
 
+
+
 markdown_ext: markdown,md,liquid
-future: true
+future: false
 
 # Setup
 title: Alla Romasheva
