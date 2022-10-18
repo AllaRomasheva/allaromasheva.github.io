@@ -10,7 +10,7 @@ author:
     name: telegraf.design
     url: https://cases.media/article/magiya-chorno-bilogo-v-mistectvi-ta-dizaini
 image:
-    path: https://i.imgur.com/tKC6pTz.jpg
+    path: https://i.imgur.com/PKy3nAE.jpg
     width: 800
     height: 400
 ---
