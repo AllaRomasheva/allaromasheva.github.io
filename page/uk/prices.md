@@ -1,7 +1,7 @@
 ---
 title: Prices
 published: false
-permalink: en/prices.html
+permalink: uk/prices.html
 sitemap: false
 layout: post
 ---

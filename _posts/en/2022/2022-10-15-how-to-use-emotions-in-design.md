@@ -4,11 +4,11 @@ description: People are often driven by emotions and logic only occasionally dom
 lang: en
 category: en
 source:
-    name: cases.media
-    url: https://cases.media/article/magiya-chorno-bilogo-v-mistectvi-ta-dizaini
+    name: lazarev.agency
+    url: https://www.lazarev.agency/articles/how-to-use-emotions-in-ui-ux-understanding-emotional-design
 author:
-    name: telegraf.design
-    url: https://cases.media/article/magiya-chorno-bilogo-v-mistectvi-ta-dizaini
+    name: lazarev.agency
+    url: https://www.lazarev.agency/articles/how-to-use-emotions-in-ui-ux-understanding-emotional-design
 image:
     path: https://i.imgur.com/tKC6pTz.jpg
     width: 800

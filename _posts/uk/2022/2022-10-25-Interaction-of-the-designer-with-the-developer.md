@@ -4,11 +4,11 @@ description: Ви лише виграєте, якщо розумітимете �
 lang: uk
 category: uk
 source:
-    name: cases.media
-    url: https://cases.media/article/vzayemodiya-dizainera-z-rozrobnikom
+    name: lazarev.agency
+    url: https://www.lazarev.agency/articles/how-to-use-emotions-in-ui-ux-understanding-emotional-design
 author:
-    name: cases.media
-    url: https://cases.media/article/vzayemodiya-dizainera-z-rozrobnikom
+    name: lazarev.agency
+    url: https://www.lazarev.agency/articles/how-to-use-emotions-in-ui-ux-understanding-emotional-design
 image:
     path: https://i.imgur.com/e5R8QzL.jpg
     width: 800
