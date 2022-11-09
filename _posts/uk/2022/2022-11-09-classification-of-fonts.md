@@ -10,7 +10,7 @@ author:
     name: cases.media
     url: https://cases.media/article/anatomiya-shriftu-ch-2-klasifikaciya-shriftiv
 image:
-    path: https://i.imgur.com/2lryYKj.jpg
+    path: https://i.imgur.com/G8wiYsL.jpg
     width: 800
     height: 400
 ---
