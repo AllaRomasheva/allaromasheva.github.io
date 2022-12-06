@@ -100,7 +100,7 @@ get to them without knowing how the code works
 ### Responsive web design (2010)
 
 A great guy named Ethan Marcotte decided to change the approach by using the same content but with
-with different layouts depending on the need, which transformed into responsive web design.
+with different layouts depending on the need, which transformed into responsive web design. 
 
 Technically, the same HTML and CSS were still used. But here there are different understandings about what it actually is. 
 From the side the designer has to create many layouts. For the client, this means that it works on a smartphone. 
