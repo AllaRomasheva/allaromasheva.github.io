@@ -1,4 +1,4 @@
 <figure class="image">
-<img loading="lazy" src="{{include.src | prepend: "https://im.ksv.app/imgur/" }}" alt="{{include.alt | default: page.title }}">
+<img loading="lazy" src="{{include.src | prepend: "https://im.ksv.app/imgur/" | append: '?w=768' }}" alt="{{include.alt | default: page.title }}">
 {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
