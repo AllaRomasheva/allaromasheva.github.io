@@ -104,7 +104,7 @@ defaults:
       seo:
         links:
           - https://romasheva.design/uk/
-          - https://romasheva.cv/uk/
+          - https://alla.romasheva.com/uk/
 
   - scope:
       path: 'page/en'
@@ -113,4 +113,4 @@ defaults:
       seo:
         links:
           - https://romasheva.design/en/
-          - https://romasheva.cv/en/
+          - https://alla.romasheva.com/en/
