@@ -1,5 +1,5 @@
 ---
-title: What is time management ?
+title: What is time management?
 description: Personal time management or how to manage your time.
 lang: en
 category: en

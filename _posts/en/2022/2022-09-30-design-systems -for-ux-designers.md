@@ -24,7 +24,7 @@ philosophies and other digital assets for a product design company. It’s usual
 ## What can you learn from them?
 
 So how can you learn from this? Say you’re designing a e-commerce website and the menu needs a dropdown for categories. 
-Not sure what size your arrow should be on the dropdown or how far away from the text to place it ? Well, you can look to 
+Not sure what size your arrow should be on the dropdown or how far away from the text to place it? Well, you can look to 
 a shopping system pioneer like Shopify to see how they do it!
 
 ### 1. Google Material Design System

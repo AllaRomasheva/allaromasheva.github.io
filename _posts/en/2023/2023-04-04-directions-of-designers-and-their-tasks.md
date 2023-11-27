@@ -1,5 +1,5 @@
 ---
-title: In which creative companies do specialists work ?
+title: In which creative companies do specialists work?
 description: Let's still try to figure out what specialists are found in creative companies and what the names of their positions mean.
 lang: en
 category: en

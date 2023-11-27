@@ -1,5 +1,5 @@
 ---
-title: The most popular types of logos and how to choose the best option ?
+title: The most popular types of logos and how to choose the best option?
 description: How to choose the best logo for your business and use it effectively for promotion.
 category: en
 source:

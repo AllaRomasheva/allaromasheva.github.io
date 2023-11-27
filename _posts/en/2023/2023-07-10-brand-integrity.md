@@ -1,5 +1,5 @@
 ---
-title: Brand integrity. What it is and how to achieve it ?
+title: Brand integrity. What it is and how to achieve it?
 description: In this article, we will examine the importance of brand integrity, delve into effective strategies for achieving brand identity, and analyze how it can impact customer loyalty.
 lang: en
 category: en

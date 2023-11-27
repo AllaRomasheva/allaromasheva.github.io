@@ -1,5 +1,5 @@
 ---
-title: How to make a UX review of your product ?
+title: How to make a UX review of your product?
 description: What is a UX review and why is it important to implement this process in your product? How to analyze the product yourself?
 lang: en
 category: en

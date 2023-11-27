@@ -44,7 +44,7 @@ It helps to create the color scheme of the application, which will evoke the emo
 
 The design of mobile applications for Android and iOS includes thinking through the gestures with which users work with
 the service. There are several gestures and features that you can use on your site: touch, double tap,
-"Pinch", "hold and drag" ??, as well as "touch and drag". Analysis of user experience will help to determine
+"Pinch", "hold and drag", as well as "touch and drag". Analysis of user experience will help to determine
 with the most commonly used gestures to include them in the app and stay on top.
 
 ### Intuitive interface

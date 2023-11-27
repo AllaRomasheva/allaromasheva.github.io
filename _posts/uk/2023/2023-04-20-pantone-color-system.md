@@ -92,7 +92,7 @@ Yellow 012 C (золотий).
 
 {% include imgur src="zLFguPF.png" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-### Як працює Pantone ?
+### Як працює Pantone?
 
 Отже, основу системи Pantone складає уніфікація кольорів через стандартизацію формули їх змішування.
 

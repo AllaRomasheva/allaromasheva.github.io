@@ -1,5 +1,5 @@
 ---
-title: What is a brief and why is it needed ?
+title: What is a brief and why is it needed?
 description: Design is not art. "I see it that way" is not appropriate here. Design exists to solve business problems, make money and achieve goals in a visual way.
 category: en
 source:

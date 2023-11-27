@@ -24,7 +24,7 @@ image:
 
 {% include imgur src="bBn3iWO.jpg" alt="Photo courtesy of olivia mew(CC No Derivatives)" %}
 
-### Що робить Pinterest унікальним ?
+### Що робить Pinterest унікальним?
 
 Pinterest — це онлайн-платформа для пошуку, зберігання та поширення зображень. На відміну від інших соцмереж, таких як Facebook, 
 Instagram або Twitter, він не акцентує на компонентах соцмережі.

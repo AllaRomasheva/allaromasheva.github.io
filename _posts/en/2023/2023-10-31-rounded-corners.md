@@ -1,5 +1,5 @@
 ---
-title: Why do we round corners ?
+title: Why do we round corners?
 description: Rounded corners everywhere. But why are rounded corners so popular?
 category: en
 source:
