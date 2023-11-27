@@ -1,5 +1,5 @@
 ---
-title: What is a brand book and why is it needed ?
+title: What is a brand book and why is it needed?
 description: A brand book is an important element in forming a strong brand image. It is used for marketing campaigns, as well as communication, creation of products and services.
 category: en
 source:
