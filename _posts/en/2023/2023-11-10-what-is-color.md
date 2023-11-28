@@ -9,7 +9,7 @@ author:
     name: Ivanna Hrytsyuk
     url: https://drukarnia.com.ua/articles/a-vi-znali-sho-vse-navkolo-nas-bezbarvne-SPMHa
 image:
-    path: https://i.imgur.com/tHcgKAF.jpg
+    path: https://i.imgur.com/3wfAjA4.jpg
     width: 800
     height: 400
 ---
