@@ -9,7 +9,7 @@ author:
     name: komarov.design
     url: https://www.komarov.design/triendi-ghrafichnogho-dizainu-2024/
 image:
-    path: https://i.imgur.com/po9tEBC.jpg
+    path: https://i.imgur.com/ppI8hec.jpg
     width: 800
     height: 400
 ---
