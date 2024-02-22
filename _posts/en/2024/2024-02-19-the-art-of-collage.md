@@ -22,8 +22,6 @@ Collages can become the highlight of your e-mail, advertising campaign or commun
 to you you do not need to create them personally, because we have collected for you a special collection of original 
 collages that will be perfect for any format. Check it out and choose an image for your next exciting project!
 
-- https://depositphotos.com/ua/folder/384714482.html?utm_source=blogcollection&utm_medium=blog&utm_campaign=The+Art+of+Collage
-
 ### The main thing about the art of collage
 
 As an art form, collage emerged at the beginning of the last century thanks to the work of such famous artists as Pablo Picasso,
