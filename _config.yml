@@ -70,6 +70,12 @@ author:
     height: 512
     width: 512
 
+feed:
+  posts_limit: 1000
+  categories:
+    - uk
+    - en
+
 defaults:
 
   - scope:
@@ -86,6 +92,7 @@ defaults:
       path: '_posts/uk'
     values:
       layout: 'post'
+      category: uk
       lang: uk
       permalink: '/uk/:year/:title.html'
 
@@ -94,6 +101,7 @@ defaults:
       path: '_posts/en'
     values:
       layout: 'post'
+      category: en
       lang: en
       permalink: '/en/:year/:title.html'
 
