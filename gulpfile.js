@@ -5,7 +5,7 @@ const replace = require('gulp-string-replace');
 const favicons = require("favicons");
 
 gulp.task('favicon', function(){
-    const color = '#000000';
+    const color = '#202020';
     const iconFile = '_assets/favicon.svg';
     const iconPath = 'dist/favicon';
     const appName  = 'Alla Romasheva';

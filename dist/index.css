@@ -546,15 +546,15 @@ a.active {
 }
 
 .ratio-4x3 {
-  --aspect-ratio: calc(3 / 4 * 100%);
+  --aspect-ratio: 75%;
 }
 
 .ratio-16x9 {
-  --aspect-ratio: calc(9 / 16 * 100%);
+  --aspect-ratio: 56.25%;
 }
 
 .ratio-21x9 {
-  --aspect-ratio: calc(9 / 21 * 100%);
+  --aspect-ratio: 42.8571428571%;
 }
 
 .icon {
@@ -820,7 +820,7 @@ iframe {
 .embed.youtube:before {
   content: "";
   display: block;
-  padding-top: calc( 1% * ( (9/16) * 100) );
+  padding-top: 56.25%;
 }
 .embed.youtube > iframe {
   position: absolute;
@@ -1148,7 +1148,7 @@ iframe {
 }
 .app-entry__cover:before {
   content: "";
-  padding-top: calc(9 / 16 * 100%);
+  padding-top: 56.25%;
   display: block;
 }
 .app-entry__gradient:after {
@@ -1199,7 +1199,7 @@ iframe {
 }
 .app-card__front:before, .app-card__back:before {
   content: "";
-  padding-top: calc(3 / 4 * 100%);
+  padding-top: 75%;
   display: block;
 }
 .app-card__back, .app-card__image, .app-card__inner, .app-card__front:after {

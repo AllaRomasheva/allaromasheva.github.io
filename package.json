@@ -6,6 +6,7 @@
     "gulp2go": "^1.0.7"
   },
   "dependencies": {
+    "@kosatyi/rollup": "^0.0.17",
     "smoothscroll-polyfill": "^0.4.4"
   }
 }
